@@ -75,6 +75,37 @@
       text-align:center;
     }
   </style>
+  <script type="text/javascript">
+    //時間
+    var attime;
+    function clock(){
+      var time=new Date();          
+      attime=time.getHours()+"時"+time.getMinutes()+"分"+time.getSeconds()+"秒";
+      document.getElementById("clock").value = attime;
+    }
+    window.setInterval(clock,1000)
+    //計時器
+    var ms=0,sec=0,min=0,hr=0;
+        function numCount() {
+            var attle=hr+"h"+min+"m"+sec+"s"+ms;
+            document.getElementById('txt').value = attle;
+            ms = ms + 1;
+
+            if (ms==100){
+                ms=0;
+                sec=sec+1;
+                if(sec==60){
+                    sec=0;
+                    min=min+1;
+                    if(min==60){
+                        min=0;
+                        hr=hr+1;
+                    }
+                }
+            }
+        }
+        window.setInterval(numCount,10)
+  </script>
 </head>
 
 <body class="body">
@@ -136,14 +167,13 @@
       </div>
     </div>
   </div>
-  <div class="foot" style="height:20px;">
-    <img src="" alt="" >
+  <div class="foot" style="height:50px;">
+    <form>
+        <input type="text" id="clock" size="50"  />
+        <input type="text" id="txt" style="width:128px">
+    </form>
   </div>
-  </p>
-  <p></p>
-  <p></p>
-  <p></p>
-  <p></p>
+
 </body>
 
 </html>
