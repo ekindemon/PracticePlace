@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var sec=0,min=0,hr=0,ms=0;
+    function timer(){
+        document.getElementById("microsecond").innerHTML=ms;
+        document.getElementById("second").innerHTML=sec;
+        document.getElementById("minute").innerHTML=min;
+        document.getElementById("hour").innerHTML=hr;
+        ms=ms+1;
+        if(ms==100){
+            ms=0;
+            sec=sec+1;
+            if(sec==60){
+                sec=0
+                min=min+1;
+                if(min==60){
+                    min=0;
+                    hr=hr+1;
+                }
+            }
+        }
+    }
+    window.setInterval(timer,10)
+
+</script>
+<body>
+    <P>這是一個計時器:<span id=hour>X</span>時<span id=minute>X</span>分<span id="second">X</span>秒<span id="microsecond">X</span></span></P>
+</body>
+</html>

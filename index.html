@@ -1,9 +1,10 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="zh-tw">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>resume</title>
+  <title>Eddie's resume</title>
+  <meta neme="descroption" content="這是一個描述默默無名工程師如何變成偉大工程師的一個過程，我們要做的就是等這件事情發生。">
   <script type="text/javascript">
   </script>
   <style>
@@ -67,7 +68,7 @@
       border-color: slateblue;
     }
     .foot{
-      background-color:darkorchid;
+      background-color:rgb(36, 206, 93);
       height:200px;
       clear: both;
     }
@@ -78,33 +79,34 @@
   <script type="text/javascript">
     //時間
     var attime;
-    function clock(){
+    function clockk(){
       var time=new Date();          
       attime=time.getHours()+"時"+time.getMinutes()+"分"+time.getSeconds()+"秒";
-      document.getElementById("clock").value = attime;
+      document.getElementById("clock").innerHTML=attime;
     }
-    window.setInterval(clock,1000)
+    window.setInterval(clockk,10)
     //計時器
-    var ms=0,sec=0,min=0,hr=0;
-        function numCount() {
-            var attle=hr+"h"+min+"m"+sec+"s"+ms;
-            document.getElementById('txt').value = attle;
-            ms = ms + 1;
-
-            if (ms==100){
-                ms=0;
-                sec=sec+1;
-                if(sec==60){
-                    sec=0;
-                    min=min+1;
-                    if(min==60){
-                        min=0;
-                        hr=hr+1;
-                    }
+    var sec=0,min=0,hr=0,ms=0;
+    function timer(){
+        document.getElementById("microsecond").innerHTML=ms;
+        document.getElementById("second").innerHTML=sec;
+        document.getElementById("minute").innerHTML=min;
+        document.getElementById("hour").innerHTML=hr;
+        ms=ms+1;
+        if(ms==100){
+            ms=0;
+            sec=sec+1;
+            if(sec==60){
+                sec=0
+                min=min+1;
+                if(min==60){
+                    min=0;
+                    hr=hr+1;
                 }
             }
         }
-        window.setInterval(numCount,10)
+    }
+    window.setInterval(timer,10)
   </script>
 </head>
 
@@ -169,8 +171,8 @@
   </div>
   <div class="foot" style="height:50px;">
     <form>
-        <input type="text" id="clock" size="50"  />
-        <input type="text" id="txt" style="width:128px">
+        <p id=clock>X</p>
+        <p>停留時間:<span id=hour>X</span>時<span id=minute>X</span>分<span id="second">X</span>秒<span id="microsecond">X</span></span></p>
     </form>
   </div>
 
