@@ -11,7 +11,8 @@
     <p><span id="time">5</span>秒后回到主页<a href="javascript:history.back()">返回</a></p>
     <script type="text/javascript">
         var num = document.getElementById("time").innerHTML
-        var i = setInterval("if(num > 1){document.getElementById('time').innerHTML = --num;}else{location.assign('http://www.imooc.com');}", 1000);
+        var i = setInterval
+        ("if(num > 1){num = --num;}else{location.assign('http://www.imooc.com');}", 1000);
     </script>
 </body>
 </html>
