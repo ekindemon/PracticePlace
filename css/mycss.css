@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    }
+}
 
   /*body{
     background-color:#f3cd05;
@@ -9,6 +9,8 @@
 .head {
     /*background-color: rgb(253, 220, 148);*/
     margin-bottom: 20px;
+
+
 }
 
 .paragraph {
@@ -22,6 +24,7 @@
     /*background-color: #f18904;*/
     height: 200px;
     margin: 0px 0px;
+
 
 }
 
@@ -48,6 +51,7 @@
 .border-top {
     border-top-style: dashed;
     border-top-color: green;
+    border-top-width:3px;
 }
 
 .border {
@@ -55,18 +59,26 @@
     border-color: slateblue;
 }
 .foot{
-    background-color:rgb(36, 206, 93);
-    height:200px;
+    background:rgb(36, 206, 93) url("../mao/footer3.jpg") repeat;
+    height:350px;
     clear: both;
     
 }
 .footer-upper{
-    position: relative;
-    padding: 50px 0px 0px;
-    color: #c2b2a1;
-    line-height: 2em;
+position: relative;
+padding: 50px 0px 0px;
+color: #c2b2a1;
+line-height: 2em;
 border-top: 4px solid #8bc34a;
 }
 .text-center{
     text-align:center;
+}
+p,li {
+    font-size:17px;
+
+}
+
+.float{
+    float:left;
 }

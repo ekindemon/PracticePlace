@@ -7,156 +7,151 @@
   <meta neme="descroption" content="這是一個描述默默無名工程師如何變成偉大工程師的一個過程，我們要做的就是等這件事情發生。">
   <script type="text/javascript">
   </script>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="css/mycss.css">
+  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
+    .progress {
+      height: 30px;
+      background: #fff;
+      border-top: 5px solid #1c2647;
+      border-bottom: 5px solid #1c2647;
+      border-radius: 0;
+      margin-bottom: 25px;
+      overflow: visible;
+      position: relative;
     }
+    .progress-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1c2647;
+            margin: 0 0 10px;
+        }
+    .progress:before,
+        .progress:after {
+            content: "";
+            width: 5px;
+            background: #1c2647;
+            position: absolute;
+            top: 0;
+            left: -5px;
+            bottom: 0;
+        }
+        .progress:after {
+            left: auto;
+            right: -5px;
+        }
 
-    /*body{
-      background-color:#f3cd05;
-    }*/
-    .head {
-      /*background-color: rgb(253, 220, 148);*/
-      margin-bottom: 20px;
-
-
+    .progress .progress-bar {
+      border: none;
+      box-shadow: none;
+      -webkit-animation: 2s linear 0s normal none infinite running progress-bar-stripes, animate-positive 1s;
+      animation: 2s linear 0s normal none infinite running progress-bar-stripes, animate-positive 1s;
     }
+    @-webkit-keyframes animate-positive {
+            0% {
+                width: 0;
+            }
+        }
 
-    .paragraph {
-      /*background-color: #f49f05;*/
-      height: 200px;
-      margin: 0px 0px;
-
-    }
-
-    .paragraph2 {
-      /*background-color: #f18904;*/
-      height: 200px;
-      margin: 0px 0px;
-
-
-    }
-
-    .paragraph3 {
-      /*background-color: #fff067;*/
-      height: 200px;
-    }
-
-    .mragin {
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    .div-left {
-      width: 53%;
-      float: left;
-    }
-
-    .div-right {
-      width: 45%;
-      float: right;
-    }
-
-    .border-top {
-      border-top-style: dashed;
-      border-top-color: green;
-    }
-
-    .border {
-      border-style: solid;
-      border-color: slateblue;
-    }
-    .foot{
-      background:rgb(36, 206, 93) url("mao/footer3.jpg") repeat;
-      height:350px;
-      clear: both;
-      
-    }
-    .footer-upper{
-	position: relative;
-	padding: 50px 0px 0px;
-	color: #c2b2a1;
-	line-height: 2em;
-  border-top: 4px solid #8bc34a;
-    }
-    .text-center{
-      text-align:center;
-    }
-
+        @keyframes animate-positive {
+            0% {
+                width: 0;
+            }
+        }
   </style>
   <script type="text/javascript">
     //時間
     var attime;
-    function clockk(){
-      var time=new Date();          
-      attime=time.getHours()+"時"+time.getMinutes()+"分"+time.getSeconds()+"秒";
-      document.getElementById("clock").innerHTML=attime;
+    function clockk() {
+      var time = new Date();
+      attime = time.getHours() + "時" + time.getMinutes() + "分" + time.getSeconds() + "秒";
+      document.getElementById("clock").innerHTML = attime;
     }
-    window.setInterval(clockk,10)
+    window.setInterval(clockk, 10)
     //計時器
-    var sec=0,min=0,hr=0,ms=0;
-    function timer(){
-        document.getElementById("microsecond").innerHTML=ms;
-        document.getElementById("second").innerHTML=sec;
-        document.getElementById("minute").innerHTML=min;
-        document.getElementById("hour").innerHTML=hr;
-        ms=ms+1;
-        if(ms==100){
-            ms=0;
-            sec=sec+1;
-            if(sec==60){
-                sec=0
-                min=min+1;
-                if(min==60){
-                    min=0;
-                    hr=hr+1;
-                }
-            }
+    var sec = 0, min = 0, hr = 0, ms = 0;
+    function timer() {
+      document.getElementById("microsecond").innerHTML = ms;
+      document.getElementById("second").innerHTML = sec;
+      document.getElementById("minute").innerHTML = min;
+      document.getElementById("hour").innerHTML = hr;
+      ms = ms + 1;
+      if (ms == 100) {
+        ms = 0;
+        sec = sec + 1;
+        if (sec == 60) {
+          sec = 0
+          min = min + 1;
+          if (min == 60) {
+            min = 0;
+            hr = hr + 1;
+          }
         }
+      }
     }
-    window.setInterval(timer,10)
+    window.setInterval(timer, 10)
   </script>
 </head>
 
 <body class="body">
   <div class="head">
-      <img src="mao/Kyrie2.jpg" alt="Kyrie" width="100%">
+    <img src="mao/Kyrie2.jpg" alt="Kyrie" width="100%">
   </div>
   <div class="mragin">
-    <div class="div-left">
-      <div class="paragraph border-top">
+    <div class="div-left"><!--左欄-->
+      <div class="paragraph border-top" >
         <h2 class="onetwo">我是你應該知道的人</h2>
-        <p>Hi,I'm Eddie.不是這個
-        </p><a href="https://en.wikipedia.org/wiki/Eddie_Redmayne">Eddie</a>，也不是這個
-          <a href="https://zh.wikipedia.org/wiki/%E5%BD%AD%E4%BA%8E%E6%99%8F">Eddie</a>
-          ，我喜歡製作東西，特別是網站，我想我們應該談談。
+        <p id="qqqq">Hi,I'm Eddie.不是這個
+        <a href="https://en.wikipedia.org/wiki/Eddie_Redmayne" id="showpic" >Eddie</a>，也不是這個
+        <a href="https://zh.wikipedia.org/wiki/%E5%BD%AD%E4%BA%8E%E6%99%8F" id="showpic1">Eddie</a>
+        ，我喜歡製作東西，特別是網站，我想我們應該談談。
         </p>
       </div>
       <div class="paragraph2 border-top">
         <h2 class="onetwo">曾經的資訊業務，網管</h2>
-        <p>高中就讀資訊科，大學勤益資管系，出社會第一份工作為MIS網管，經過兩年時間後，
-          脫離舒適區繼續挑戰自己，選擇首航資訊網路行銷公司繼續挑戰自己，職位是資訊業務，
-          在職期間為能更深入擔任此職好跟客戶推銷產品，開始研究網站相關技能，
+        <p>高中就讀資訊科，大學勤益資管系，出社會第一份工作為MIS網管，經過兩年時間後， 脫離舒適區繼續挑戰自己，選擇首航資訊網路行銷公司繼續挑戰自己，職位是資訊業務， 在職期間為能更深入擔任此職好跟客戶推銷產品，開始研究網站相關技能，
           進一步發現在程式方面的興趣大於業務。
       </div>
       <div class="paragraph border-top">
         <h2 class="onetwo">過去現在未來</h2>
-        <p>過去高中有用過fontpage做網站還有用vb做程式設計，
-          大學時期有摸過基礎C++跟Java學校也都有相對應的課程，
-          但那時候對程式興趣不大，
-          目前在網路上透過前輩提供線上教學的課程在自學html、css、javascript，
+        <p>過去高中有用過fontpage做網站還有用vb做程式設計， 大學時期有摸過基礎C++跟Java學校也都有相對應的課程， 但那時候對程式興趣不大， 目前在網路上透過前輩提供線上教學的課程在自學html、css、javascript，
           未來在會先朝javascript這邊去精通，在延伸到其他。
         </p>
       </div>
       <div class="paragraph3 border-top">
         <h2 class="onetwo">工作上的優勢</h2>
-        <p>為什麼要用我?現在我的優勢，在經歷過自我尋找這塊，
-          找到方向後擁有比別人更多的熱情、經驗、動力及溝通力，
-          相信在前端這份工作上，能發揮最大效益。
+        <p>為什麼要用我?現在我的優勢，在經歷過自我尋找這塊， 找到方向後擁有比別人更多的熱情、經驗、動力及溝通力， 相信在前端這份工作上，能發揮最大效益。
+      </div>
+      <div class="border-top">
+        <h2 class="onetwo">擅長的技能</h2>
+
+
+            <h3 class="progress-title">HTML5 - 70%</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width:70%;"></div>
+            </div>
+
+            <h3 class="progress-title">CSS3 - 70%</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-info progress-bar-striped active" style="width:70%;"></div>
+            </div>
+
+            <h3 class="progress-title">JavaScript - 50%</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width:50%;"></div>
+            </div>
+
+            <h3 class="progress-title">J-Query - 60%</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:60%;"></div>
+            </div>
+
+
       </div>
     </div>
     <div class="div-right">
+      <!--右欄-->
       <div class="border-top text-center">
         <img src="mao/Mao.jpg" alt="personal photo " width="100%">
         <h2>This is what I look like</h2>
@@ -182,47 +177,65 @@
   </div>
   <div class="foot">
     <div style="text-align:right">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13550.17027860754!2d120.671020947966!3d24.13035041882656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d0146d61257%3A0x7a16000e8eb3abce!2z5ZyL56uL5YWs5YWx6LOH6KiK5ZyW5pu46aSo!5e0!3m2!1szh-TW!2stw!4v1520684264102" 
-      width="400" height="300" frameborder="0" style="border:0 ;margin:15px" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13550.17027860754!2d120.671020947966!3d24.13035041882656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d0146d61257%3A0x7a16000e8eb3abce!2z5ZyL56uL5YWs5YWx6LOH6KiK5ZyW5pu46aSo!5e0!3m2!1szh-TW!2stw!4v1520684264102"
+        width="400" height="300" frameborder="0" style="border:0 ;margin:15px" allowfullscreen></iframe>
     </div>
     <form>
-        <p id=clock>X</p>
-        <p><span id=hour>X</span>時<span id=minute>X</span>分<span id="second">X</span>秒<span id="microsecond">X</span></span></p>
+      <p id=clock>X</p>
+      <p>
+        <span id=hour>X</span>時
+        <span id=minute>X</span>分
+        <span id="second">X</span>秒
+        <span id="microsecond">X</span>
+        </span>
+      </p>
     </form>
   </div>
-  <script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
   <script type="text/javascript" src="js/animatext.min.js"></script>
   <script type="text/javascript">
-      $('.animateTitle1').animatext({
-          speed: 300,
-          effect: 'flipInY',
-          reverse: false
-      });
-      $("").animatext();
-      $(".demo22").animatext({
-          speed: 150,
-          effect: 'flipInX',
-          infinite: true
-      });
-      $(".demo3").animatext({
-          speed: 150,
-          mode: "words",
-          effect: 'swing',
-          infinite: true
-      });
-      $(".demo4").animatext({
-          speed: 150,
-          effect: 'tada',
-          reverse: true,
-          infinite: true
-      });
-      $(".onetwo").animatext({
-          speed: 150,
-          effect: 'tada',
-          random: true,
-          //infinite: true
-      });
+    $('.animateTitle1').animatext({
+      speed: 300,
+      effect: 'flipInY',
+      reverse: false
+    });
+    $("").animatext();
+    $(".demo22").animatext({
+      speed: 150,
+      effect: 'flipInX',
+      infinite: true
+    });
+    $(".demo3").animatext({
+      speed: 150,
+      mode: "words",
+      effect: 'swing',
+      infinite: true
+    });
+    $(".demo4").animatext({
+      speed: 150,
+      effect: 'tada',
+      reverse: true,
+      infinite: true
+    });
+    $(".onetwo").animatext({
+      speed: 300,
+      effect: 'tada',
+      random: true,
+      //infinite: true
+    });
+        //滑鼠滑過
+        var qqqq=document.getElementById('qqqq');
+    qqqq.onmouseover=function(){
+      qqqq.style.color="red";
+    }
+    qqqq.onmouseout=function(){
+      qqqq.style.color="black";
+    }
+    var showpic=document.getElementById("showpic");
+    showpic.onmouseover=function(){
+      
+    }
   </script>
 </body>
 
