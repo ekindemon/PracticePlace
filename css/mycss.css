@@ -78,7 +78,6 @@ p,li {
     font-size:17px;
 
 }
-
-.float{
-    float:left;
+#qwer,#asdf{
+    float: right;
 }

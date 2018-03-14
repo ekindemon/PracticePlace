@@ -41,7 +41,6 @@
             left: auto;
             right: -5px;
         }
-
     .progress .progress-bar {
       border: none;
       box-shadow: none;
@@ -102,9 +101,9 @@
     <div class="div-left"><!--左欄-->
       <div class="paragraph border-top" >
         <h2 class="onetwo">我是你應該知道的人</h2>
-        <p id="qqqq">Hi,I'm Eddie.不是這個
-        <a href="https://en.wikipedia.org/wiki/Eddie_Redmayne" id="showpic" >Eddie</a>，也不是這個
-        <a href="https://zh.wikipedia.org/wiki/%E5%BD%AD%E4%BA%8E%E6%99%8F" id="showpic1">Eddie</a>
+        <p>Hi,I'm Eddie.不是這個
+        <a href="https://en.wikipedia.org/wiki/Eddie_Redmayne" id="qwe" >Eddie</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Eddie_Redmayne_by_Gage_Skidmore.jpg/330px-Eddie_Redmayne_by_Gage_Skidmore.jpg" id="qwer" height="300"width="200" style="display:none">，也不是這個
+        <a href="https://zh.wikipedia.org/wiki/%E5%BD%AD%E4%BA%8E%E6%99%8F" id="asd">Eddie</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg/330px-2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg" id="asdf" height="300" width="220" style="display:none">
         ，我喜歡製作東西，特別是網站，我想我們應該談談。
         </p>
       </div>
@@ -224,18 +223,25 @@
       random: true,
       //infinite: true
     });
-        //滑鼠滑過
-        var qqqq=document.getElementById('qqqq');
-    qqqq.onmouseover=function(){
-      qqqq.style.color="red";
+        //滑鼠滑過ED
+        var qwe=document.getElementById('qwe');
+        var qwer=document.getElementById('qwer');
+      qwe.onmouseover=function(){
+      qwer.style.display="block";
     }
-    qqqq.onmouseout=function(){
-      qqqq.style.color="black";
+    qwe.onmouseout=function(){
+      qwer.style.display="none";
     }
-    var showpic=document.getElementById("showpic");
-    showpic.onmouseover=function(){
-      
+            //滑鼠滑過ED2
+            var asd=document.getElementById('asd');
+        var asdf=document.getElementById('asdf');
+      asd.onmouseover=function(){
+      asdf.style.display="block";
     }
+    asd.onmouseout=function(){
+      asdf.style.display="none";
+    }
+
   </script>
 </body>
 
