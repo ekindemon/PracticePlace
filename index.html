@@ -71,10 +71,10 @@
     //計時器
     var sec = 0, min = 0, hr = 0, ms = 0;
     function timer() {
-      document.getElementById("microsecond").innerHTML = ms;
-      document.getElementById("second").innerHTML = sec;
-      document.getElementById("minute").innerHTML = min;
-      document.getElementById("hour").innerHTML = hr;
+      $('#microsecond').html(ms);
+      $('#second').html(sec);
+      $('#minute').html(min);
+      $('#hour').html(hr);
       ms = ms + 1;
       if (ms == 100) {
         ms = 0;
@@ -102,8 +102,8 @@
       <div class="paragraph border-top" >
         <h2 class="onetwo">我是你應該知道的人</h2>
         <p>Hi,I'm Eddie.不是這個
-        <a href="https://en.wikipedia.org/wiki/Eddie_Redmayne" id="qwe" >Eddie</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Eddie_Redmayne_by_Gage_Skidmore.jpg/330px-Eddie_Redmayne_by_Gage_Skidmore.jpg" id="qwer" height="300"width="200" style="display:none">，也不是這個
-        <a href="https://zh.wikipedia.org/wiki/%E5%BD%AD%E4%BA%8E%E6%99%8F" id="asd">Eddie</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg/330px-2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg" id="asdf" height="300" width="220" style="display:none">
+        <a href="https://en.wikipedia.org/wiki/Eddie_Redmayne" id="qwe" target="_blank">Eddie</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Eddie_Redmayne_by_Gage_Skidmore.jpg/330px-Eddie_Redmayne_by_Gage_Skidmore.jpg" id="qwer" height="300"width="200" style="display:none">，也不是這個
+        <a href="https://zh.wikipedia.org/wiki/%E5%BD%AD%E4%BA%8E%E6%99%8F" id="asd" target="blank">Eddie</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg/330px-2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg" id="asdf" height="300" width="220" style="display:none">
         ，我喜歡製作東西，特別是網站，我想我們應該談談。
         </p>
       </div>
@@ -167,7 +167,7 @@
         <h2 class="onetwo">寫作品</h2>
         <ul style="margin-left:20px">
           <br>
-          <li>這是我的作品1</li>
+          <li><a href="https://github.com/ekindemon/PracticePlace" target="_blank">這是我的gitHub</a></li>
           <li>這是我的作品2</li>
           <li>這是我的作品3</li>
         </ul>
