@@ -10,6 +10,10 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" type="text/css" href="css/mycss.css">
   <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+  <link rel="stylesheet" href="css/custom.css">
   <style>
     .progress {
       height: 30px;
@@ -21,46 +25,51 @@
       overflow: visible;
       position: relative;
     }
+
     .progress-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #1c2647;
-            margin: 0 0 10px;
-        }
+      font-size: 18px;
+      font-weight: 700;
+      color: #1c2647;
+      margin: 0 0 10px;
+    }
+
     .progress:before,
-        .progress:after {
-            content: "";
-            width: 5px;
-            background: #1c2647;
-            position: absolute;
-            top: 0;
-            left: -5px;
-            bottom: 0;
-        }
-        .progress:after {
-            left: auto;
-            right: -5px;
-        }
+    .progress:after {
+      content: "";
+      width: 5px;
+      background: #1c2647;
+      position: absolute;
+      top: 0;
+      left: -5px;
+      bottom: 0;
+    }
+
+    .progress:after {
+      left: auto;
+      right: -5px;
+    }
+
     .progress .progress-bar {
       border: none;
       box-shadow: none;
       -webkit-animation: 2s linear 0s normal none infinite running progress-bar-stripes, animate-positive 1s;
       animation: 2s linear 0s normal none infinite running progress-bar-stripes, animate-positive 1s;
     }
-    @-webkit-keyframes animate-positive {
-            0% {
-                width: 0;
-            }
-        }
 
-        @keyframes animate-positive {
-            0% {
-                width: 0;
-            }
-        }
+    @-webkit-keyframes animate-positive {
+      0% {
+        width: 0;
+      }
+    }
+
+    @keyframes animate-positive {
+      0% {
+        width: 0;
+      }
+    }
   </style>
   <script type="text/javascript">
-    //時間
+    /*//時間
     var attime;
     function clockk() {
       var time = new Date();
@@ -90,21 +99,214 @@
       }
     }
     window.setInterval(timer, 10)
+    */
   </script>
 </head>
 
 <body class="body">
   <div class="head">
-    <img src="mao/Kyrie2.jpg" alt="Kyrie" width="100%">
+    <img src="img/Kyrie2.jpg" alt="Kyrie" width="100%">
   </div>
+  <div class="page-wrapper">
+    <nav id="sidebar" class="sidebar-wrapper">
+      <div class="sidebar-content">
+        <a href="#" id="toggle-sidebar">
+          <i class="fa fa-bars"></i>
+        </a>
+        <div class="sidebar-brand">
+          <a href="#">pro sidebar</a>
+        </div>
+        <div class="sidebar-header">
+          <div class="user-pic">
+            <img class="img-responsive img-rounded" src="/img/user.jpg" alt="">
+          </div>
+          <div class="user-info">
+            <span class="user-name">Jhon
+              <strong>Smith</strong>
+            </span>
+            <span class="user-role">Administrator</span>
+            <div class="user-status">
+              <a href="#">
+                <span class="label label-success">Online</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar-header  -->
+        <div class="sidebar-search">
+          <div>
+            <div class="input-group">
+              <input type="text" class="form-control search-menu" placeholder="Search for...">
+              <span class="input-group-addon">
+                <i class="fa fa-search"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar-search  -->
+        <div class="sidebar-menu">
+          <ul>
+            <li class="header-menu">
+              <span>Dropdown menu</span>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fa fa-tv"></i>
+                <span>Menu 1</span>
+                <span class="label label-danger">New</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">submenu 1
+                      <span class="label label-success">10</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">submenu 2</a>
+                  </li>
+                  <li>
+                    <a href="#">submenu 3</a>
+                  </li>
+                  <li>
+                    <a href="#">submenu 4</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fa fa-photo"></i>
+                <span>Menu 2</span>
+                <span class="badge">3</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">submenu 1
+                      <span class="badge">2</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">submenu 2</a>
+                  </li>
+                  <li>
+                    <a href="#">submenu 3</a>
+                  </li>
+                  <li>
+                    <a href="#">submenu 4</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fa fa-bar-chart-o"></i>
+                <span>Menu 3</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">submenu 1</a>
+                  </li>
+                  <li>
+                    <a href="#">submenu 2</a>
+                  </li>
+                  <li>
+                    <a href="#">submenu 3</a>
+                  </li>
+                  <li>
+                    <a href="#">submenu 4</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fa fa-diamond"></i>
+                <span>Menu 4</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">submenu 1</a>
+                  </li>
+                  <li>
+                    <a href="#">submenu 2</a>
+                  </li>
+                  <li>
+                    <a href="#">submenu 3</a>
+                  </li>
+                  <li>
+                    <a href="#">submenu 4</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-menu">
+              <span>Simple menu</span>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-tv"></i>
+                <span>Menu 1</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-photo"></i>
+                <span>Menu 2</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-bar-chart-o"></i>
+                <span>Menu 3</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-diamond"></i>
+                <span>Menu 4</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- sidebar-menu  -->
+      </div>
+      <!-- sidebar-content  -->
+
+      <div class="sidebar-footer">
+        <a href="#">
+          <i class="fa fa-bell"></i>
+          <span class="label label-warning notification">3</span>
+        </a>
+        <a href="#">
+          <i class="fa fa-envelope"></i>
+          <span class="label label-success notification">7</span>
+        </a>
+        <a href="#">
+          <i class="fa fa-gear"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-power-off"></i>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <!-- page-wrapper -->
   <div class="mragin">
-    <div class="div-left"><!--左欄-->
-      <div class="paragraph border-top" >
+    <div class="div-left">
+      <!--左欄-->
+      <div class="paragraph border-top">
         <h2 class="onetwo">我是你應該知道的人</h2>
         <p>Hi,I'm Eddie.不是這個
-        <a href="https://en.wikipedia.org/wiki/Eddie_Redmayne" id="qwe" target="_blank">Eddie</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Eddie_Redmayne_by_Gage_Skidmore.jpg/330px-Eddie_Redmayne_by_Gage_Skidmore.jpg" id="qwer" height="300"width="200" style="display:none">，也不是這個
-        <a href="https://zh.wikipedia.org/wiki/%E5%BD%AD%E4%BA%8E%E6%99%8F" id="asd" target="blank">Eddie</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg/330px-2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg" id="asdf" height="300" width="220" style="display:none">
-        ，我喜歡製作東西，特別是網站，我想我們應該談談。
+          <a href="https://en.wikipedia.org/wiki/Eddie_Redmayne" id="qwe" target="_blank">Eddie</a>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Eddie_Redmayne_by_Gage_Skidmore.jpg/330px-Eddie_Redmayne_by_Gage_Skidmore.jpg"
+            id="qwer" height="300" width="200" style="display:none">，也不是這個
+          <a href="https://zh.wikipedia.org/wiki/%E5%BD%AD%E4%BA%8E%E6%99%8F" id="asd" target="blank">Eddie</a>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg/330px-2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg"
+            id="asdf" height="300" width="220" style="display:none"> ，我喜歡製作東西，特別是網站，我想我們應該談談。
         </p>
       </div>
       <div class="paragraph2 border-top">
@@ -126,25 +328,25 @@
         <h2 class="onetwo">擅長的技能</h2>
 
 
-            <h3 class="progress-title">HTML5 - 70%</h3>
-            <div class="progress">
-              <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width:70%;"></div>
-            </div>
+        <h3 class="progress-title">HTML5 - 70%</h3>
+        <div class="progress">
+          <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width:70%;"></div>
+        </div>
 
-            <h3 class="progress-title">CSS3 - 70%</h3>
-            <div class="progress">
-              <div class="progress-bar progress-bar-info progress-bar-striped active" style="width:70%;"></div>
-            </div>
+        <h3 class="progress-title">CSS3 - 70%</h3>
+        <div class="progress">
+          <div class="progress-bar progress-bar-info progress-bar-striped active" style="width:70%;"></div>
+        </div>
 
-            <h3 class="progress-title">JavaScript - 50%</h3>
-            <div class="progress">
-              <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width:50%;"></div>
-            </div>
+        <h3 class="progress-title">JavaScript - 50%</h3>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width:50%;"></div>
+        </div>
 
-            <h3 class="progress-title">J-Query - 60%</h3>
-            <div class="progress">
-              <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:60%;"></div>
-            </div>
+        <h3 class="progress-title">J-Query - 60%</h3>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:60%;"></div>
+        </div>
 
 
       </div>
@@ -152,7 +354,7 @@
     <div class="div-right">
       <!--右欄-->
       <div class="border-top text-center">
-        <img src="mao/Mao.jpg" alt="personal photo " width="100%">
+        <img src="img/Mao.jpg" alt="personal photo " width="100%">
         <h2>This is what I look like</h2>
         <br>
         <br>
@@ -167,7 +369,9 @@
         <h2 class="onetwo">寫作品</h2>
         <ul style="margin-left:20px">
           <br>
-          <li><a href="https://github.com/ekindemon/PracticePlace" target="_blank">這是我的gitHub</a></li>
+          <li>
+            <a href="https://github.com/ekindemon/PracticePlace" target="_blank">這是我的gitHub</a>
+          </li>
           <li>這是我的作品2</li>
           <li>這是我的作品3</li>
         </ul>
@@ -179,7 +383,7 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13550.17027860754!2d120.671020947966!3d24.13035041882656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d0146d61257%3A0x7a16000e8eb3abce!2z5ZyL56uL5YWs5YWx6LOH6KiK5ZyW5pu46aSo!5e0!3m2!1szh-TW!2stw!4v1520684264102"
         width="400" height="300" frameborder="0" style="border:0 ;margin:15px" allowfullscreen></iframe>
     </div>
-    <form>
+    <!--<form>
       <p id=clock>X</p>
       <p>
         <span id=hour>X</span>時
@@ -187,12 +391,15 @@
         <span id="second">X</span>秒
         <span id="microsecond">X</span>
         </span>
-      </p>
+      </p>   
     </form>
+    -->
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
   <script type="text/javascript" src="js/animatext.min.js"></script>
+  <script src="js//jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/custom.js"></script>
   <script type="text/javascript">
     $('.animateTitle1').animatext({
       speed: 300,
@@ -223,23 +430,23 @@
       random: true,
       //infinite: true
     });
-        //滑鼠滑過ED
-        var qwe=document.getElementById('qwe');
-        var qwer=document.getElementById('qwer');
-      qwe.onmouseover=function(){
-      qwer.style.display="block";
+    //滑鼠滑過ED
+    var qwe = document.getElementById('qwe');
+    var qwer = document.getElementById('qwer');
+    qwe.onmouseover = function () {
+      qwer.style.display = "block";
     }
-    qwe.onmouseout=function(){
-      qwer.style.display="none";
+    qwe.onmouseout = function () {
+      qwer.style.display = "none";
     }
-            //滑鼠滑過ED2
-            var asd=document.getElementById('asd');
-        var asdf=document.getElementById('asdf');
-      asd.onmouseover=function(){
-      asdf.style.display="block";
+    //滑鼠滑過ED2
+    var asd = document.getElementById('asd');
+    var asdf = document.getElementById('asdf');
+    asd.onmouseover = function () {
+      asdf.style.display = "block";
     }
-    asd.onmouseout=function(){
-      asdf.style.display="none";
+    asd.onmouseout = function () {
+      asdf.style.display = "none";
     }
 
   </script>
