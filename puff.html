@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+<script type="text/javascript" src="js/animatext.min.js"></script>
+<script src="js//jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+    $(function () {
+        $('.test').mouseover(function () {
+            $('.test').each(function () {
+                var position = $(this).position();
+                $(this)
+                    .css({
+                        position: 'absolute', top: position.top,
+                        left: position.left                    
+})
+                    .animate(
+                        {
+                            opacity: 'hide',
+                            width: $(this).width() * 5,
+                            height: $(this).height() * 5,
+                            top: position.top - ($(this).height() * 5 / 2),
+                            left: position.left - ($(this).width() * 5 / 2)
+                        },
+                        'normal');
+            });
+        });
+    });
+
+</script>
+
+<body>
+    <img src="img/footer3.jpg" alt="" height="100px" width="100px" class="test">
+
+</body>
+
+</html>
