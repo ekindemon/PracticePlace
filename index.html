@@ -205,21 +205,22 @@
             <li class="sidebar-dropdown">
               <a href="#">
                 <i class="fa fa-photo"></i>
-                <span>Manu 2</span>
+                <!--CSS練習網頁-->
+                <span>CSS Practice</span>
                 <span class="badge">3</span>
               </a>
               <div class="sidebar-submenu">
                 <ul>
                   <li>
-                    <a href="#">submenu 1
+                    <a href="cssTest1.html" target="_blank">CSS Practice1
                       <span class="badge">2</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#">submenu 2</a>
+                    <a href="cssTest2.html" target="_blank">CSS Practice2</a>
                   </li>
                   <li>
-                    <a href="#">submenu 3</a>
+                    <a href="cssTest3.html" target="_blank">CSS Practice3</a>
                   </li>
                   <li>
                     <a href="#">submenu 4</a>
@@ -230,6 +231,7 @@
             <li class="sidebar-dropdown">
               <a href="#">
                 <i class="fa fa-bar-chart-o"></i>
+                <!--HTML練習網頁-->
                 <span>HTML Practice</span>
               </a>
               <div class="sidebar-submenu">
@@ -425,7 +427,9 @@
     var qwe = document.getElementById('qwe');
     var qwer = document.getElementById('qwer');
     qwe.onmouseover = function () {
+      qwer.style.cssFloat="right"
       qwer.style.display = "block";
+      
     }
     qwe.onmouseout = function () {
       qwer.style.display = "none";
@@ -434,6 +438,7 @@
     var asd = document.getElementById('asd');
     var asdf = document.getElementById('asdf');
     asd.onmouseover = function () {
+      asdf.style.cssFloat="right"
       asdf.style.display = "block";
     }
     asd.onmouseout = function () {
