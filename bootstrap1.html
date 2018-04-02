@@ -1,48 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bootstrap網頁</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="js/jquery-3.3.1.min.js">
-    <link rel="stylesheet" href="js/bootstrap.min.js">
-
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.c-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
     </style>
 </head>
+
 <body>
-    
-    <div class="container-fluid">
-        <div class="row text-center" >
+    <div class="container">
+        <!--導航欄-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!--導航欄首頁-->
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">日光旅遊</a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="sr-only">導覽按鈕</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--導覽列項目-->
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#">首頁</a>
+                        </li>
+                        <li>
+                            <a href="#">票券</a>
+                        </li>
+                        <li>
+                            <a href="#">訂房</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">旅遊
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">國外團體</a>
+                                </li>
+                                <li>
+                                    <a href="#">國內團體</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="#">國外自由行</a>
+                                </li>
+                                <li>
+                                    <a href="#">國內自由行</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--輪播-->
+        <div id="myCarousel" class="carousel slide">
+            <!--輪播指示-->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!--輪播內容-->
+            <div class="carousel-inner">
+                <!--第一個輪播項目(包含圖片、標題、介紹)-->
+                <div class="item active">
+                    <img src="img/photo1.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h1>超值行程-奧地利真善美湖區</h1>
+                        <p class="lead">特別企劃，帶你閒情漫遊歐洲最美的小鎮!</p>
+                    </div>
+                </div>
+                <!--第二個輪播項目(包含圖片、標題、介紹)-->
+                <div class="item">
+                    <img src="img/photo2.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h1>超值行程-奧地利熊布朗宮</h1>
+                        <p class="lead">特別企劃，入內參觀-探哈布斯堡王朝的繁盛興衰!</p>
+                    </div>
+                </div>
+                <!--第三個輪播項目(包含圖片、標題、介紹)-->
+                <div class="item">
+                    <img src="img/photo3.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h1>超值行程-北海道雪的美術館</h1>
+                        <p class="lead">特別企劃，獨家雪的美術館體驗浪漫藝術氣息!</p>
+                    </div>
+                </div>
+            </div>
+            <!--輪播控制-->
+            <a href="#myCarousel" class="carousel-control left" data-slide="prev">
+                <span class="glyphicon gylphicon-chevron-left"></span>
+            </a>
+            <a href="#myCarousel" class="carousel-control right " data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        <!--警報效果-->
+        <hr>
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert">
+                <span>&times;</span>
+            </button>
+            <a href="#" class="alert-link">
+                <strong>年終特惠!</strong>
+            </a>
+            雙十連假出國馬上報名一人限折3000元!
+        </div>
+        <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+            <a href="#" class="alert-link"><strong>賞楓一起 GO!</strong></a>
+            日本賞楓團享四人同行一人免費!
+        </div>
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+            <a href="#" class="alert-link"><strong>東澳特賣會!</strong></a>
+            雪梨煙火秀在送免費擁抱無尾熊!
+        </div>
+        <!--內容區-->
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="img/img1.jpg" class="img-circle" width="150" height="150" alt="">
+                <h3>戀戀北海道</h3>
+                <p>東京迪士尼樂園是老少皆宜的歡樂天堂，與白雪公主、米老鼠、唐老鴨、小熊維尼 一同遨遊童話世界，明日世界、小小世界、海盜船、灰姑娘城堡，非洲叢林探險等設施。</p>
+                <p><a href="#" class="btn btn-default" role="button">詳細資料&raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                    <img src="img/img2.jpg" class="img-circle" width="150" height="150" alt="">
+                    <h3>文藝維也納</h3>
+                    <p>富良野四季采之秋占地7公頃，遍植薰衣草、金魚草、百日草、向日葵、晚開薰衣草、鼠尾草、波斯菊 、醉燦花、金盞花、大波斯菊等觀賞鮮花，滿滿花田令人心曠神怡。</p>
+                    <p><a href="#" class="btn btn-default" role="button">詳細資料&raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                        <img src="img/img1.jpg" class="img-circle" width="150" height="150" alt="">
+                        <h3>純淨瑞士</h3>
+                        <p>豪斯登堡位於日本九州，一處重現中古世紀歐洲街景的渡假勝地，本名由來是荷蘭女王殿下 所居住的宮殿豪斯登宮殿，國內風景宜人俯拾皆畫。</p>
+                        <p><a href="#" class="btn btn-default" role="button">詳細資料&raquo;</a></p>
+                    </div>
+        </div>
+        <div class="row text-center">
             <div class="col-md-4 ">
-                <img src="img/img4.jpg" alt="花現富良野" class="img-circle" height="150" width="150" >
+                <img src="img/img4.jpg" alt="花現富良野" class="img-circle" height="150" width="150">
                 <h3>花現富良野</h3>
-                <p>富良野四季采之秋占地7公頃，遍植薰衣草、金魚草、百日草、向日葵、晚開薰衣草、鼠尾草、波斯菊
-                    、醉燦花、金盞花、大波斯菊等觀賞鮮花，滿滿花田令人心曠神怡。
+                <p>富良野四季采之秋占地7公頃，遍植薰衣草、金魚草、百日草、向日葵、晚開薰衣草、鼠尾草、波斯菊 、醉燦花、金盞花、大波斯菊等觀賞鮮花，滿滿花田令人心曠神怡。
                 </p>
                 <a class="btn btn-default" href="#">詳細資料&raquo;</a>
             </div>
             <div class="col-md-4 ">
-                <img src="img/img5.jpg" alt="遇見九州" class="img-circle" height="150" width="150" >
+                <img src="img/img5.jpg" alt="遇見九州" class="img-circle" height="150" width="150">
                 <h3>遇見九州</h3>
-                <p>豪斯登堡位於日本九州，一處重現中古世紀歐洲街景的渡假勝地，本名由來是荷蘭女王殿下
-                    所居住的宮殿豪斯登宮殿，國內風景宜人俯拾皆畫。
+                <p>豪斯登堡位於日本九州，一處重現中古世紀歐洲街景的渡假勝地，本名由來是荷蘭女王殿下 所居住的宮殿豪斯登宮殿，國內風景宜人俯拾皆畫。
                 </p>
                 <a class="btn btn-default" href="#">詳細資料&raquo;</a>
             </div>
             <div class="col-md-4 ">
-                    <img src="img/img6.jpg" alt="暢遊東京" class="img-circle" height="150" width="150" >
-                    <h3>暢遊東京</h3>
-                    <p>東京迪士尼樂園是老少皆宜的歡樂天堂，與白雪公主、米老鼠、唐老鴨、小熊維尼
-                        一同遨遊童話世界，明日世界、小小世界、海盜船、灰姑娘城堡，非洲叢林探險等設施。
-                    </p>
-                    <a class="btn btn-default" href="#">詳細資料&raquo;</a>
+                <img src="img/img6.jpg" alt="暢遊東京" class="img-circle" height="150" width="150">
+                <h3>暢遊東京</h3>
+                <p>東京迪士尼樂園是老少皆宜的歡樂天堂，與白雪公主、米老鼠、唐老鴨、小熊維尼 一同遨遊童話世界，明日世界、小小世界、海盜船、灰姑娘城堡，非洲叢林探險等設施。
+                </p>
+                <a class="btn btn-default" href="#">詳細資料&raquo;</a>
             </div>
         </div>
     </div>
+    <!--頁尾-->
+    <hr>
+    <footer>
+        <p>&copy;2017 日光旅遊&middot;洽詢電話:0800-000-168</p>
+        <p class="text-right"><a href="#">Back to top</a></p>
+    </footer>
+    </div>
 </body>
+
 </html>
