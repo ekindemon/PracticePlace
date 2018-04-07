@@ -6,16 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Eddie's resume</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <!-- 滾輪特效樣式 -->
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mycss.css">
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <!-- 滾輪特效程式 -->
+  <script src="js/delighters.js"></script>
+  <style>
+    @media(max-width:480px) {
+      .hide-in-mobile {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <h1>HI,this is Eddie</h1>
+    <h1 class="right" data-delighter>HI,this is Eddie</h1>
   </header>
   <nav class="navbar navbar-inverse" style="margin:0px">
     <div class="container-fluid">
@@ -107,8 +120,8 @@
                 <a href="bootstrap3.html" target="_blank">bootstrap Practice 3</a>
               </li>
               <li>
-                  <a href="bootstrap4.html" target="_blank">bootstrap Practice 4</a>
-                </li>
+                <a href="bootstrap4.html" target="_blank">bootstrap Practice 4</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -116,52 +129,157 @@
     </div>
   </nav>
   <!--about me-->
-  <div class="text-center">
-    <h1>Who is Eddie</h1>
+  <div class="text-center splash" data-delighter>
+    <h1 class="bottom" data-delighter="start:1">Who is Eddie</h1>
   </div>
   <div class="container-fluid">
-    <div class="row text-center" >
+    <div class="row text-center splash">
+      <!-- Eddie Redmayne介紹 -->
       <div class="col-md-4">
-        <img class="img-circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Eddie_Redmayne_by_Gage_Skidmore.jpg/330px-Eddie_Redmayne_by_Gage_Skidmore.jpg" alt="" height="200px" width="200px">
-        <h1>Eddie" Redmayne</h1>
-        <p>OBE (/ˈrɛdˌmeɪn/; born 6 January 1982) is an English actor of stage and screen. Born and raised in London, he studied history of art at Trinity College, Cambridge, after which he briefly pursued a modelling career.</p>
-        <p>In June 2015, it was announced that Redmayne would star as Newt Scamander in the film adaptation of Fantastic Beasts and Where to Find Them, a series of prequels to the Harry Potter film series, with a screenplay by J. K. Rowling.</p>
-        <p>In 2016, he began starring as Newt Scamander in the Fantastic Beasts film series.</p>
+        <img class="img-circle right" data-delighter src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Eddie_Redmayne_by_Gage_Skidmore.jpg/330px-Eddie_Redmayne_by_Gage_Skidmore.jpg"
+          alt="" height="200px" width="200px">
+        <h1 class="left" data-delighter>Eddie" Redmayne</h1>
+        <p class="right" data-delighter>OBE (/ˈrɛdˌmeɪn/; born 6 January 1982) is an English actor of stage and screen. Born and raised in London, he studied
+          history of art at Trinity College, Cambridge, after which he briefly pursued a modelling career.</p>
+        <p class="left" data-delighter>In June 2015, it was announced that Redmayne would star as Newt Scamander in the film adaptation of Fantastic Beasts
+          and Where to Find Them, a series of prequels to the Harry Potter film series, with a screenplay by J. K. Rowling.</p>
+        <p class="right" data-delighter>In 2016, he began starring as Newt Scamander in the Fantastic Beasts film series.</p>
       </div>
-      <div class="col-md-4">
-        <img class="img-circle" src="img/eddie.jpg" alt="" height="200px" width="200px">
-        <h1>ＸＸＸ<small>(Eddie)</small></h1>
-        <p>（XXXX年X月XX日－，，好！我告訴你，我小孩子的時候就見過飛碟了，
+      <!-- Eddie 介紹 -->
+      <div class="col-md-4 right" data-delighter>
+        <img class="img-circle left" data-delighter src="img/eddie.jpg" alt="" height="200px" width="200px">
+        <h1 class="right" data-delighter>ＸＸＸ
+          <small>(Eddie)</small>
+        </h1>
+        <p class="left" data-delighter>（XXXX年X月XX日－，，好！我告訴你，我小孩子的時候就見過飛碟了， 就是世人所說的UFO，不明飛行物體，妳懂不懂？ 四歲那年我又見過傳說中的尼斯湖水怪， 又跟喜馬拉雅山的大腳八聊過天猜過拳。 再加上我從小到大每天早上都玩雲霄飛車，下午就玩海盜船。
+          也有上午玩海盜船，下午玩雲霄飛車， 黃昏再玩一次海盜船的也試過， 我告訴你！ 所以我常跟年輕人說，不要想一步登天！ 我有今天的一份功力是經過無數次的考驗。 我見過最恐怖的事情，最驚險的事情我也見過！
 
-            就是世人所說的UFO，不明飛行物體，妳懂不懂？
-            
-            四歲那年我又見過傳說中的尼斯湖水怪，
-            
-            又跟喜馬拉雅山的大腳八聊過天猜過拳。
-            
-            再加上我從小到大每天早上都玩雲霄飛車，下午就玩海盜船。
-            
-            也有上午玩海盜船，下午玩雲霄飛車，
-            
-            黃昏再玩一次海盜船的也試過， 我告訴你！
-            
-            所以我常跟年輕人說，不要想一步登天！
-            
-            我有今天的一份功力是經過無數次的考驗。
-            
-            我見過最恐怖的事情，最驚險的事情我也見過！</p>
+        </p>
       </div>
+      <!-- 彭于晏介紹 -->
       <div class="col-md-4">
-        <img class="img-circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg/330px-2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg" alt="" height="200px" width="200px">
-        <h1>彭于晏<small>(Eddie)</small></h1>
-        <p>（1982年3月24日－），臺灣男演員，出生於臺灣澎湖，13歲和家人移民到加拿大，進入加拿大英屬哥倫比亞大學，主修經濟學。大二暑假外婆過世，他回台奔喪，被導演邀請參加甄選演出偶像劇《愛情白皮書》。彭于晏回憶說：「我抱持打工的心情去嘗試，當時也沒簽任何合約就去拍戲的。」因進入演藝圈而休學專心拍片。</p>
-        <p>彭于晏已不止一次在鏡頭前展現其語言天賦，此前也有數次全英文訪談，他在鏡頭前揮灑自如，全英文應對不設限。對此，有粉絲稱讚他「不僅帥臉加分，還是高智商優質偶像」。</p>
+        <img class="img-circle left" data-delighter src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg/330px-2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg"
+          alt="" height="200px" width="200px">
+        <h1 class="left" data-delighter>彭于晏
+          <small>(Eddie)</small>
+        </h1>
+        <p class="right" data-delighter>（1982年3月24日－），臺灣男演員，出生於臺灣澎湖，13歲和家人移民到加拿大，進入加拿大英屬哥倫比亞大學，主修經濟學。大二暑假外婆過世，他回台奔喪，被導演邀請參加甄選演出偶像劇《愛情白皮書》。彭于晏回憶說：「我抱持打工的心情去嘗試，當時也沒簽任何合約就去拍戲的。」因進入演藝圈而休學專心拍片。</p>
+        <p class="left" data-delighter>彭于晏已不止一次在鏡頭前展現其語言天賦，此前也有數次全英文訪談，他在鏡頭前揮灑自如，全英文應對不設限。對此，有粉絲稱讚他「不僅帥臉加分，還是高智商優質偶像」。</p>
       </div>
-    </div>
-    <div class="row">
-
     </div>
   </div>
+  <!-- 學經歷 -->
+  <div class="text-center">
+    <h1 class="bottom" data-delighter="start:1">Resume</h1>
+    <p class="bottom" data-delighter="start:1">Experience is the best teacher</p>
+  </div>
+  <hr>
+  <div class="container">
+    <!-- 第一列經歷 -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2 class="right" data-delighter>EXPERIENCE</h2>
+      </div>
+      <div class="col-md-8 text-left bottom" data-delighter="start:1.5">
+        <p>
+          <strong>首航資訊網路行銷公司</strong>
+        </p>
+        <p>2017/8~2018/2</p>
+        <p>
+          <strong>創紀數位網路行銷公司</strong>
+        </p>
+        <p>2015/8~2018/5</p>
+      </div>
+    </div>
+    <!-- 第二列學歷 -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2 class="right" data-delighter>EDUCATION</h2>
+      </div>
+      <div class="col-md-8 text-left bottom" data-delighter="start:1.7">
+        <p>
+          <strong>國立勤益科技大學 資管系
+            <small>Department of Information Management</small>
+          </strong>
+        </p>
+        <p>2011~2014</p>
+        <p>
+          <strong>私立中台科技大學 資管系
+            <small>Department of Information Management</small>
+          </strong>
+        </p>
+        <p>2009~2011</p>
+        <p>
+          <strong>私立宜寧高級中學 資訊科
+            <small>Department of Information Management</small>
+          </strong>
+        </p>
+        <p>2006~2009 </p>
+      </div>
+    </div>
+  </div>
+  <!-- 技能 -->
+  <hr>
+  <div>
+    <h1>Skill</h1>
+    <div class="container">
+      <div class="row">
+        <!-- 第一個計數器特效 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="counter">
+            <div class="counter-content">
+              <i class="counter-icon fa fa-globe"></i>
+              <span class="counter-value">75</span>
+              <h3 class="title">Web Design</h3>
+            </div>
+          </div>
+        </div>
+        <!-- 第二個計數器特效 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="counter">
+            <div class="counter-content">
+              <i class="counter-icon fa fa-rocket"></i>
+              <span class="counter-value">100</span>
+              <h3 class="title">Web Development</h3>
+            </div>
+          </div>
+        </div>
+        <!-- 第三個計數器特效 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="counter">
+            <div class="counter-content">
+              <i class="counter-icon fa fa-globe"></i>
+              <span class="counter-value">75</span>
+              <h3 class="title">Web Design</h3>
+            </div>
+          </div>
+        </div>
+        <!-- 第四個計數器特效 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="counter">
+            <div class="counter-content">
+              <i class="counter-icon fa fa-rocket"></i>
+              <span class="counter-value">100</span>
+              <h3 class="title">Web Development</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $('.counter-value').each(function () {
+      $(this).prop('Counter', 0).animate({
+        Counter: $(this).text()
+      }, {
+          duration: 3500,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          }
+        });
+    });           
+  </script>
 </body>
 
 </html>

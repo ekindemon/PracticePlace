@@ -96,3 +96,61 @@ p,li {
 li {
     margin-bottom:10px;
 }
+/*計時器動畫*/
+.counter{
+    background: #7a7fb6;
+    text-align: center;
+    position: relative;
+}
+.counter .counter-content{
+    padding: 30px 20px 50px;
+    color: #fff;
+    position: relative;
+}
+.counter:before,
+.counter:after,
+.counter .counter-content:before,
+.counter .counter-content:after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    box-shadow: inset 0 2px 2px #000;
+    top: 15px;
+    left: 15px;
+}
+.counter:after{
+    left: auto;
+    right: 15px;
+}
+.counter .counter-content:before,
+.counter .counter-content:after{
+    box-shadow: inset 0 -2px 2px #000;
+    top: auto;
+    bottom: 15px;
+}
+.counter .counter-content:after{
+    left: auto;
+    bottom: 15px;
+    right: 15px;
+}
+.counter .counter-icon{
+    display: inline-block;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.counter .counter-value{
+    display: block;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+.counter .title{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.71);
+}
+@media only screen and (max-width: 990px){
+    .counter{ margin-bottom: 20px; }
+}                  

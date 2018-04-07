@@ -1,46 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>bootstrap practice</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <title>Bootstrap網頁</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.c-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
+
+    <!-- 導航列 -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid" style="background:#428bca">
+            <!-- 導覽列的首頁 -->
             <div class="navbar-header">
-                <a href="#" class="navbar-brand">日光旅遊</a>
+                <a href="#" class="navbar-brand" style="color:white">日光美食部落</a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only">導覽按鈕</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar" style="background:white"></span>
+                    <span class="icon-bar" style="background:white"></span>
+                    <span class="icon-bar" style="background:white"></span>
                 </button>
             </div>
-
-            <div id="navbar" class="navbar-collapse collapse">
+            <!-- 導覽列的項目 -->
+            <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">首頁</a></li>
-                    <li><a href="#">票券</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" 
-                        role="button">訂房<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">國內訂房</a></li>
-                            <li><a href="#">國外訂房</a></li>
-                        </ul>
+                    <li class="active">
+                        <a href="#">首頁</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:white">新增文章</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:white">管理後台</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color:white">站長日誌</a>
                     </li>
                 </ul>
+
+                <form action="" class="navbar-form navbar-right">
+                    <div class="form-group has-feedback">
+                        <input type="search" class="form-control" placeholder="輸入美食或餐廳">
+                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                    </div>
+                    <button type="submit" class="btn btn-default">搜尋</button>
+                </form>
             </div>
         </div>
     </nav>
+    <!-- 頁首 -->
+    <header>
+        <div class="container">
+            <h1>日光美食部落</h1>
+            <p class="lead">找美食、拍美食、寫美食，趕快加入我們的行列吧!</p>
+        </div>
+    </header>
+    <!-- 內容區 -->
+    <div class="container">
+        <div class="row">
+            <!-- 文章 -->
+            <article>
+                <div class="col-sm-8">
+                    <h3>老屋&middot;慢食&middot;樂埔町Leputing</h3>
+                    <p>2017年7月by
+                        <a href="#">小丸子</a>
+                    </p>
+                    <img src="img/leput1.jpg" class="img-responsive">
+                    <p>優雅美麗的樂埔町是一座精心修復的古老日式建物，在新舊交融的陳設裡，流露出濃濃的懷舊風情，行走其中彷彿穿越時空的迴廊。</p>
+                    <hr>
+                    <img src="img/leput2.jpg" class="img-responsive">
+                    <p>質樸雅致的餐具與擺設延續了樂埔町一貫的靜雅風情，在其間用餐，讓人暫時忘了繁重的壓力，盡情享受閒適的氣氛與美味的餐點。</p>
+                    <hr>
+                    <img src="img/leput3.jpg" class="img-responsive">
+                    <p>樂埔町以融合日式調味文化與西式烹調手法的料理，呈現台灣在地美好食材，圖為炭香雞腿佐南瓜泥，嚴選本土育種的馨甜嫩雞，佐以大地賜予的蔬菜根莖類，讓人品嘗到自然鮮甜無負擔。</p>
+                    <hr>
+
+                    <nav>
+                        <ul class="list-inline text-center">
+                            <li>
+                                <a href="#" class="btn btn-info btn-lg">上一篇</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-info btn-lg">下一篇</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </article>
+            <!--側邊欄 -->
+            <aside>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <!-- 第一個面板 -->
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3>關於我們</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>這是由一群愛吃愛玩的部落客所組成的部落格，專門為同好特搜好吃好玩的美食與景點，也歡迎同好與我們一起分享!</p>
+                        </div>
+                    </div>
+                    <!-- 第二個面板 -->
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h3>美食推薦</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ol class="list-unstyled">
+                                <li>
+                                    <a href="#">沾美西餐廳</a>
+                                </li>
+                                <li>
+                                    <a href="#">心壽司日式烹割</a>
+                                </li>
+                                <li>
+                                    <a href="#">游一間鋪</a>
+                                </li>
+                                <li>
+                                    <a href="#">ATTS Coffee</a>
+                                </li>
+                                <li>
+                                    <a href="#">晶華酒店下午茶</a>
+                                </li>
+                                <li>
+                                    <a href="#">一蘭拉麵</a>
+                                </li>
+                                <li>
+                                    <a href="#">一風堂拉麵</a>
+                                </li>
+                                <li>
+                                    <a href="#">望月樓</a>
+                                </li>
+                                <li>
+                                    <a href="#">新葡苑</a>
+                                </li>
+                                <li>
+                                    <a href="#">鼎泰豐</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- 第三個面板 -->
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3>廣告連結</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ol class="list-unstyled">
+                                <li>
+                                    <a href="#">廣告連結1</a>
+                                </li>
+                                <li>
+                                    <a href="#">廣告連結2</a>
+                                </li>
+                                <li>
+                                    <a href="#">廣告連結3</a>
+                                </li>
+                                <li>
+                                    <a href="#">廣告連結4</a>
+                                </li>
+                                <li>
+                                    <a href="#">廣告連結5</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <!-- 頁尾 -->
+    <footer>
+        <hr>
+        <div class="container"></div>
+        <p>&copy;2017日光多媒體&middot;<a href="#">隱私權政策</a>&middot;<a href="#">服務條款</a></p>
+        <p class="text-right"><a href="#">Back to top</a></p>
+        
+    </footer>
 </body>
 
 </html>
