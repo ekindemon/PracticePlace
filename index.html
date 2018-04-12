@@ -1,454 +1,387 @@
-<!DOCTYPE HTML>
-<html lang="zh-tw">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Eddie's resume</title>
-  <meta neme="descroption" content="">
-  <script type="text/javascript">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <!-- 字型 -->
+  <link href="https://fonts.googleapis.com/css?family=Bitter|Sedgwick+Ave+Display" rel="stylesheet">
+  <!-- 滾輪特效樣式 -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 滾輪特效搭配wow.js -->
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/mycss.css">
+  <!-- fontawesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- 滾輪特效程式 -->
+  <script src="js/delighters.js"></script>
+  <!-- 滾輪特定位置觸發特效 -->
+  <script src="js/wow.js"></script>
+  <script>
+    new WOW().init();
   </script>
-  <!-- Stylesheets -->
-  <link rel="stylesheet" type="text/css" href="css/mycss.css">
-  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
-  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
-  <link rel="stylesheet" href="css/custom.css">
   <style>
-    .progress {
-      height: 30px;
-      background: #fff;
-      border-top: 5px solid #1c2647;
-      border-bottom: 5px solid #1c2647;
-      border-radius: 0;
-      margin-bottom: 25px;
-      overflow: visible;
-      position: relative;
-    }
-
-    .progress-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: #1c2647;
-      margin: 0 0 10px;
-    }
-
-    .progress:before,
-    .progress:after {
-      content: "";
-      width: 5px;
-      background: #1c2647;
-      position: absolute;
-      top: 0;
-      left: -5px;
-      bottom: 0;
-    }
-
-    .progress:after {
-      left: auto;
-      right: -5px;
-    }
-
-    .progress .progress-bar {
-      border: none;
-      box-shadow: none;
-      -webkit-animation: 2s linear 0s normal none infinite running progress-bar-stripes, animate-positive 1s;
-      animation: 2s linear 0s normal none infinite running progress-bar-stripes, animate-positive 1s;
-    }
-
-    @-webkit-keyframes animate-positive {
-      0% {
-        width: 0;
-      }
-    }
-
-    @keyframes animate-positive {
-      0% {
-        width: 0;
+    @media(max-width:480px) {
+      .hide-in-mobile {
+        display: none;
       }
     }
   </style>
-  <script type="text/javascript">
-    /*//時間
-    var attime;
-    function clockk() {
-      var time = new Date();
-      attime = time.getHours() + "時" + time.getMinutes() + "分" + time.getSeconds() + "秒";
-      document.getElementById("clock").innerHTML = attime;
-    }
-    window.setInterval(clockk, 10)
-    //計時器
-    var sec = 0, min = 0, hr = 0, ms = 0;
-    function timer() {
-      $('#microsecond').html(ms);
-      $('#second').html(sec);
-      $('#minute').html(min);
-      $('#hour').html(hr);
-      ms = ms + 1;
-      if (ms == 100) {
-        ms = 0;
-        sec = sec + 1;
-        if (sec == 60) {
-          sec = 0
-          min = min + 1;
-          if (min == 60) {
-            min = 0;
-            hr = hr + 1;
-          }
-        }
-      }
-    }
-    window.setInterval(timer, 10)
-    */
-  </script>
 </head>
 
-<body class="body">
-  <div class="head">
-    <img src="img/Kyrie2.jpg" alt="Kyrie" width="100%">
+<body>
+  <header>
+    <h1 class="wow bounce">HI,this is Eddie</h1>
+  </header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Eddie.Li</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+          <span class="sr-only">導覽按鈕</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="index.html">首頁</a>
+          </li>
+          <!--javascript練習網頁-->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+              Javascript practice
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="5secBackToIndex.html">5S 5secBack</a>
+              </li>
+              <li>
+                <a href="Puff.html" target="_blank">Puff</a>
+              </li>
+              <li>
+                <a href="timerUseByInnerHTML.html" target="_blank">Timer</a>
+              </li>
+            </ul>
+          </li>
+          <!--CSS練習網頁-->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+              CSS practice
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="cssTest1.html" target="_blank">CSS Practice1</a>
+              </li>
+              <li>
+                <a href="cssTest2.html" target="_blank">CSS Practice2</a>
+              </li>
+              <li>
+                <a href="cssTest3.html" target="_blank">CSS Practice3</a>
+              </li>
+            </ul>
+          </li>
+          <!--HTML練習網頁-->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+              HTML practice
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="ol.html" target="_blank">ol Practice</a>
+              </li>
+              <li>
+                <a href="dl.html" target="_blank">dl Practice</a>
+              </li>
+              <li>
+                <a href="table.html" target="_blank">table Practice</a>
+              </li>
+              <li>
+                <a href="form.html" target="_blank">form Practice</a>
+              </li>
+            </ul>
+          </li>
+          <!--Bootstrap練習網頁-->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+              Bootstrap practice
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="bootstrap1.html" target="_blank">bootstrap Practice 1</a>
+              </li>
+              <li>
+                <a href="bootstrap2.html" target="_blank">bootstrap Practice 2</a>
+              </li>
+              <li>
+                <a href="bootstrap3.html" target="_blank">bootstrap Practice 3</a>
+              </li>
+              <li>
+                <a href="bootstrap4.html" target="_blank">bootstrap Practice 4</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--about me-->
+  <div class="text-center pd-40">
+    <h1 class="wow fadeInUp ">Who is Eddie</h1>
   </div>
-  <div class="page-wrapper">
-    <!--導航欄-->
-    <nav id="sidebar" class="sidebar-wrapper">
-      <div class="sidebar-content">
-        <a href="#" id="toggle-sidebar">
-          <i class="fa fa-bars"></i>
-        </a>
-        <div class="sidebar-brand">
-          <a href="#">pro sidebar</a>
+  <div class="container-fluid">
+    <div class="row text-center ">
+      <!-- Eddie Redmayne介紹 -->
+      <div class=" col-md-4">
+        <img class="img-circle wow bounceInLeft" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Eddie_Redmayne_by_Gage_Skidmore.jpg/330px-Eddie_Redmayne_by_Gage_Skidmore.jpg"
+          alt="" height="200px" width="200px">
+        <h1 class="wow bounceInLeft">Eddie" Redmayne</h1>
+        <p class="wow bounceInLeft">OBE (/ˈrɛdˌmeɪn/; born 6 January 1982) is an English actor of stage and screen. Born and raised in London, he studied
+          history of art at Trinity College, Cambridge, after which he briefly pursued a modelling career.</p>
+        <p class="wow bounceInLeft">In June 2015, it was announced that Redmayne would star as Newt Scamander in the film adaptation of Fantastic Beasts
+          and Where to Find Them, a series of prequels to the Harry Potter film series, with a screenplay by J. K. Rowling.</p>
+        <p class="wow bounceInLeft">In 2016, he began starring as Newt Scamander in the Fantastic Beasts film series.</p>
+      </div>
+      <!-- Eddie 介紹 -->
+      <div class="col-md-4 ">
+        <img class="img-circle wow fadeInUp" src="img/eddie.jpg" alt="" height="200px" width="200px">
+        <h1 class="">ZHENG-YAN
+          <small>(Eddie)</small>
+        </h1>
+        <p class="wow fadeInUp">
+          (1991年1月29日－)，出生於台灣台中，20歲進入勤益科技大學，主修資訊管理。26歲因緣際會之下，接觸到前端網站製作的工作，醉心學習技能，待某日發展出自己的成績。
+        </p>
+        <p>洪七公:這~個年輕人雖然資歷淺 不過天才橫溢~聰明絕頂 還是我洪某人的傳人洪日慶親手提拔 誰要對付他就是對付我! 你們不但要選他當幫~主 還要用你們的愛心來愛~護他 關懷他!~時常請他飲茶 那麼我洪某人在天之靈 定會保佑丐幫生意興隆
+          千秋萬~世!!
+        </p>
+      </div>
+      <!-- 彭于晏介紹 -->
+      <div class="col-md-4 ">
+        <img class="img-circle wow bounceInRight" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg/330px-2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg"
+          alt="" height="200px" width="200px">
+        <h1 class="wow bounceInRight">彭于晏
+          <small>(Eddie)</small>
+        </h1>
+        <p class="wow bounceInRight">（1982年3月24日－），臺灣男演員，出生於臺灣澎湖，13歲和家人移民到加拿大，進入加拿大英屬哥倫比亞大學，主修經濟學。大二暑假外婆過世，他回台奔喪，被導演邀請參加甄選演出偶像劇《愛情白皮書》。彭于晏回憶說：「我抱持打工的心情去嘗試，當時也沒簽任何合約就去拍戲的。」因進入演藝圈而休學專心拍片。</p>
+        <p class="wow bounceInRight">彭于晏已不止一次在鏡頭前展現其語言天賦，此前也有數次全英文訪談，他在鏡頭前揮灑自如，全英文應對不設限。對此，有粉絲稱讚他「不僅帥臉加分，還是高智商優質偶像」。</p>
+      </div>
+    </div>
+  </div>
+  <!-- 學經歷 -->
+  <div class="text-center resume">
+    <h1 class="wow fadeInUp">Resume</h1>
+    <p class="wow fadeInUp">Experience is the best teacher</p>
+  </div>
+  <div class="container">
+    <!-- 第一列經歷 -->
+    <div class="row pd-40">
+      <div class="col-md-4">
+        <h2 class="wow bounceInLeft">EXPERIENCE</h2>
+      </div>
+      <div class="col-md-8 text-left wow fadeInUp">
+        <p>
+          <strong>首航資訊網路行銷公司</strong>
+        </p>
+        <p>2017/8~2018/2</p>
+        <p>
+          <strong>創紀數位網路行銷公司</strong>
+        </p>
+        <p>2015/8~2018/5</p>
+      </div>
+    </div>
+    <!-- 第二列學歷 -->
+    <div class="row pd-40">
+      <div class="col-md-4 ">
+        <h2 class="wow bounceInLeft">EDUCATION</h2>
+      </div>
+      <div class="col-md-8 text-left wow fadeInUp">
+        <p>
+          <strong>國立勤益科技大學 資管系
+            <small>Department of Information Management</small>
+          </strong>
+        </p>
+        <p>2011~2014</p>
+        <p>
+          <strong>私立中台科技大學 資管系
+            <small>Department of Information Management</small>
+          </strong>
+        </p>
+        <p>2009~2011</p>
+        <p>
+          <strong>私立宜寧高級中學 資訊科
+            <small>Department of Information Management</small>
+          </strong>
+        </p>
+        <p>2006~2009 </p>
+      </div>
+    </div>
+  </div>
+  <!-- 技能 -->
+  <div class="">
+    <div>
+      <div class="row skill pd-40">
+        <div class="text-center ">
+          <h1 class="wow fadeInUp ">Skill</h1>
+          <p class="wow fadeInUp">knowledge is power</p>
         </div>
-        <div class="sidebar-header">
-          <div class="user-pic">
-            <img class="img-responsive img-rounded" src="/img/user.jpg" alt="">
-          </div>
-          <div class="user-info">
-            <span class="user-name">Eddie
-              <strong>Li</strong>
-            </span>
-            <span class="user-role">Administrator</span>
-            <div class="user-status">
-              <a href="#">
-                <span class="label label-success">Online</span>
-              </a>
+        <!-- 第一個計數器特效 -->
+        <div class="col-md-4 col-sm-4 wow swing ">
+          <div class="counter ">
+            <div class="counter-content bg-primary">
+              <i class="counter-icon fab fa-gripfire"></i>
+              <span class="counter-value">9999</span>
+              <h3 class="title">Passion of learning</h3>
             </div>
           </div>
         </div>
-        <!-- sidebar-header  -->
-        <div class="sidebar-search">
-          <div>
-            <div class="input-group">
-              <input type="text" class="form-control search-menu" placeholder="Search for...">
-              <span class="input-group-addon">
-                <i class="fa fa-search"></i>
-              </span>
+        <!-- 第二個計數器特效 -->
+        <div class="col-md-4 col-sm-4 wow swing">
+          <div class="counter">
+            <div class="counter-content ">
+              <i class="counter-icon fas fa-clock"></i>
+              <span class="counter-value">960</span>
+              <h3 class="title">Learnimg time(hr)</h3>
             </div>
           </div>
         </div>
-        <!-- sidebar-search  -->
-        <div class="sidebar-menu">
-          <ul>
-              <li class="header-menu">
-                  <span>Simple menu</span>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-tv"></i>
-                    <span>工作日誌</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/ekindemon/PracticePlace" target="_blank">
-                    <i class="fa fa-photo"></i>
-                    <span>GitHub</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-bar-chart-o"></i>
-                    <span>Menu 3</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-diamond"></i>
-                    <span>Menu 4</span>
-                  </a>
-                </li>
-            <li class="header-menu">
-              <span>Dropdown menu</span>
-            </li>
-            <li class="sidebar-dropdown">
-              <a href="#">
-                <i class="fa fa-tv"></i>
-                <span>JavascroptPractice</span>
-                <span class="label label-danger">New</span>
-              </a>
-              <div class="sidebar-submenu">
-                <ul>
-                  <li>
-                    <a href="5secBackToIndex.html">5S Back
-                      <span class="label label-success">10</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="Puff.html" target="_blank" >Puff</a>
-                  </li>
-                  <li>
-                    <a href="timerUseByInnerHTML.html" target="_blank">Timer</a>
-                  </li>
-                  <li>
-                    <a href="#">submenu 4</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="sidebar-dropdown">
-              <a href="#">
-                <i class="fa fa-photo"></i>
-                <!--CSS練習網頁-->
-                <span>CSS Practice</span>
-                <span class="badge">3</span>
-              </a>
-              <div class="sidebar-submenu">
-                <ul>
-                  <li>
-                    <a href="cssTest1.html" target="_blank">CSS Practice1
-                      <span class="badge">2</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="cssTest2.html" target="_blank">CSS Practice2</a>
-                  </li>
-                  <li>
-                    <a href="cssTest3.html" target="_blank">CSS Practice3</a>
-                  </li>
-                  <li>
-                    <a href="#">submenu 4</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="sidebar-dropdown">
-              <a href="#">
-                <i class="fa fa-bar-chart-o"></i>
-                <!--HTML練習網頁-->
-                <span>HTML Practice</span>
-              </a>
-              <div class="sidebar-submenu">
-                <ul>
-                  <li>
-                    <a href="ol.html" target="_blank">ol Practice</a>
-                  </li>
-                  <li>
-                    <a href="dl.html" target="_blank">dl Practice</a>
-                  </li>
-                  <li>
-                    <a href="table.html" target="_blank">table Practice</a>
-                  </li>
-                  <li>
-                    <a href="form.html" target="_blank">form Practice</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="sidebar-dropdown">
-              <a href="#">
-                <i class="fa fa-diamond"></i>
-                <!--Boostrap練習網頁-->
-                <span>Bootstrap Practice</span>
-              </a>
-              <div class="sidebar-submenu">
-                <ul>
-                  <li>
-                    <a href="bootstrap1.html" target="_blank">bootstrap Practice 1</a>
-                  </li>
-                  <li>
-                    <a href="bootstrap2.html"  target="_blank">bootstrap Practice 2</a>
-                  </li>
-                  <li>
-                    <a href="bootstrap3.html" target="_blank">bootstrap Practice 3</a>
-                  </li>
-                  <li>
-                      <a href="bootstrap4.html" target="_blank">bootstrap Practice 4</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            
-          </ul>
+        <!-- 第三個計數器特效 -->
+        <div class="col-md-4 col-sm-4 wow swing">
+          <div class="counter">
+            <div class="counter-content bg-dark">
+              <i class="counter-icon fa fa-rocket"></i>
+              <span class="counter-value">16</span>
+              <h3 class="title">Quantity of product</h3>
+            </div>
+          </div>
         </div>
-        <!-- sidebar-menu  -->
       </div>
-      <!-- sidebar-content  -->
-      <!--
-      <div class="sidebar-footer">
-        <a href="#">
-          <i class="fa fa-bell"></i>
-          <span class="label label-warning notification">3</span>
-        </a>
-        <a href="#">
-          <i class="fa fa-envelope"></i>
-          <span class="label label-success notification">7</span>
-        </a>
-        <a href="#">
-          <i class="fa fa-gear"></i>
-        </a>
-        <a href="#">
-          <i class="fa fa-power-off"></i>
-        </a>
-      </div>
-      -->
-    </nav>
-  </div>
-  <!-- page-wrapper -->
-  <div class="mragin">
-    <div class="div-left">
-      <!--左欄-->
-      <div class="paragraph border-top">
-        <h2 class="onetwo">我是你應該知道的人</h2>
-        <p>Hi,I'm Eddie.不是這個
-          <a href="https://en.wikipedia.org/wiki/Eddie_Redmayne" id="qwe" target="_blank">Eddie</a>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Eddie_Redmayne_by_Gage_Skidmore.jpg/330px-Eddie_Redmayne_by_Gage_Skidmore.jpg"
-            id="qwer" height="300" width="200" style="display:none">，也不是這個
-          <a href="https://zh.wikipedia.org/wiki/%E5%BD%AD%E4%BA%8E%E6%99%8F" id="asd" target="blank">Eddie</a>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg/330px-2008TIBE_Day2_Hall2_MightyMedia_Honey_and_Clover_Signing_EddiePeng.jpg"
-            id="asdf" height="300" width="220" style="display:none"> ，我喜歡製作東西，特別是網站，我想我們應該談談。
-        </p>
-      </div>
-      <div class="paragraph2 border-top">
-        <h2 class="onetwo">曾經的資訊業務，網管</h2>
-        <p>高中就讀資訊科，大學勤益資管系，出社會第一份工作為MIS網管，經過兩年時間後， 脫離舒適區繼續挑戰自己，選擇首航資訊網路行銷公司繼續挑戰自己，職位是資訊業務， 在職期間為能更深入擔任此職好跟客戶推銷產品，開始研究網站相關技能，
-          進一步發現在程式方面的興趣大於業務。</p>
-      </div>
-      <div class="paragraph border-top">
-        <h2 class="onetwo">過去現在未來</h2>
-        <p>過去高中有用過fontpage做網站還有用vb做程式設計， 大學時期有摸過基礎C++跟Java學校也都有相對應的課程， 但那時候對程式興趣不大， 目前在網路上透過前輩提供線上教學的課程在自學html、css、javascript，
-          未來在會先朝javascript這邊去精通，在延伸到其他。
-        </p>
-      </div>
-      <div class="paragraph3 border-top">
-        <h2 class="onetwo">工作上的優勢</h2>
-        <p>為什麼要用我?現在我的優勢，在經歷過自我尋找這塊， 找到方向後擁有比別人更多的熱情、經驗、動力及溝通力， 相信在前端這份工作上，能發揮最大效益。
-        </p>
-      </div>
+      <div class="row pd-40" style="background-color:#cb4042;">
+      <!-- 進度條 -->
+      <div class="col-md-6 col-pull-6">
+          <h1 class="color-white text-center">Skill 2</h1>
+          <h3 class="progress-title">HTML5 - 70%</h3>
+          <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width:70%;"></div>
+          </div>
+
+          <h3 class="progress-title">CSS3 - 70%</h3>
+          <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped active" style="width:70%;"></div>
+          </div>
+
+          <h3 class="progress-title">JavaScript - 50%</h3>
+          <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width:50%;"></div>
+          </div>
+
+          <h3 class="progress-title">J-Query - 60%</h3>
+          <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:60%;"></div>
+          </div>
+        </div>
+      <!-- 番茄鐘 -->
       
+        <div class="col-md-6 col-pull-6">
+          <div class="main">
+            <h1 class="color-white">Pomodoro Clock</h1>
+            <div class="control">
+              <div class="break">
+                <p>BREAK LENGTH</p>
+                <i class="far fa-minus-square" aria-hidden="true" id="break-minus"></i>
+                <span id="break-length">5</span>
+                <i class="far fa-plus-square" aria-hidden="true" id="break-plus"></i>
+              </div>
+              <div class="length">
+                <p>SESSION LENGTH</p>
+                <i class="far fa-minus-square" aria-hidden="true" id="session-minus"></i>
+                <span id="session-length">25</span>
+                <i class="far fa-plus-square" aria-hidden="true" id="session-plus"></i>
+              </div>
+            </div>
+            <div class="clock">
+              <h2 id="show-title">Session</h2>
+              <h2 id="show-time">25:00</h2>
+              <span id="per"></span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
     </div>
-    <div class="div-right">
-      <!--右欄-->
-      <div class="border-top text-center">
-        <img src="img/Mao.jpg" alt="personal photo " width="100%">
-        <h2>This is what I look like</h2>
-        <br>
-        <br>
-      </div>
-      <div class="border-top paragraph3">
-        <h2>so you wanna get in touch</h2>
-        <p><span class="glyphicon glyphicon-envelope"></span>Email me :
-          <a href="mailto:ekinmomo@gmail.com" style="text-decoration:none;color:green;">
-            ekinmomo</a>
-        </p>
-      </div>
-      <div class="border-top">
-        <h2 class="onetwo">擅長的技能</h2>
-
-
-        <h3 class="progress-title">HTML5 - 70%</h3>
-        <div class="progress">
-          <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width:70%;"></div>
+  </div>
+  <!-- contact -->
+  <div class="bg-dark  color-white pd-40">
+    <div class="text-center" style="margin-bottom:30px;">
+      <h1>Contact</h1>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4  col-md-push-1 text-left ">
+          <p>
+            <i class="fas fa-map-marker "></i>&nbsp;South Dist., Taichung City 402, Taiwan (R.O.C.)</p>
+            <br>
+          <p>
+            <i class="fas fa-mobile-alt color-white"></i>&nbsp;+886 911923129</p>
+            <br>
+          <p>
+            <i class="fas fa-envelope color-white"></i>&nbsp;
+            <a href="mailto:ekinmomo@gmail">ekinmomo@gmail</a>
+            <br>
+          </p>
         </div>
-
-        <h3 class="progress-title">CSS3 - 70%</h3>
-        <div class="progress">
-          <div class="progress-bar progress-bar-info progress-bar-striped active" style="width:70%;"></div>
-        </div>
-
-        <h3 class="progress-title">JavaScript - 50%</h3>
-        <div class="progress">
-          <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width:50%;"></div>
-        </div>
-
-        <h3 class="progress-title">J-Query - 60%</h3>
-        <div class="progress">
-          <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:60%;"></div>
+        <div class="col-md-6 col-md-offset-1">
+          <form action="">
+            <div class="form-group">
+              <input type="text" class="form-control" id="username" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="Email1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="textarea1" placeholder="Message" style="height:200px;"></textarea>
+            </div>
+            <div class="form-group " style="display:inline">
+              <div style="float:left">
+                <button class="btn btn-secondary btn-lg" type="button">Send</button>
+              </div>
+              <div style="float:right">
+                <button class="btn btn-secondary btn-lg " type="reset">Reset</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-  <div class="foot">
-    <div style="text-align:right">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13550.17027860754!2d120.671020947966!3d24.13035041882656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d0146d61257%3A0x7a16000e8eb3abce!2z5ZyL56uL5YWs5YWx6LOH6KiK5ZyW5pu46aSo!5e0!3m2!1szh-TW!2stw!4v1520684264102"
-        width="400" height="300" frameborder="0" style="border:0 ;margin:15px" allowfullscreen></iframe>
-    </div>
-    <!--<form>
-      <p id=clock>X</p>
-      <p>
-        <span id=hour>X</span>時
-        <span id=minute>X</span>分
-        <span id="second">X</span>秒
-        <span id="microsecond">X</span>
-        </span>
-      </p>   
-    </form>
-    -->
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
-  <script type="text/javascript" src="js/animatext.min.js"></script>
-  <script src="js//jquery.mCustomScrollbar.concat.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script type="text/javascript">
-    $('.animateTitle1').animatext({
-      speed: 300,
-      effect: 'flipInY',
-      reverse: false
-    });
-    $("").animatext();
-    $(".demo22").animatext({
-      speed: 150,
-      effect: 'flipInX',
-      infinite: true
-    });
-    $(".demo3").animatext({
-      speed: 150,
-      mode: "words",
-      effect: 'swing',
-      infinite: true
-    });
-    $(".demo4").animatext({
-      speed: 150,
-      effect: 'tada',
-      reverse: true,
-      infinite: true
-    });
-    $(".onetwo").animatext({
-      speed: 300,
-      effect: 'tada',
-      random: true,
-      //infinite: true
-    });
-    //滑鼠滑過ED
-    var qwe = document.getElementById('qwe');
-    var qwer = document.getElementById('qwer');
-    qwe.onmouseover = function () {
-      qwer.style.cssFloat="right"
-      qwer.style.display = "block";
-      
-    }
-    qwe.onmouseout = function () {
-      qwer.style.display = "none";
-    }
-    //滑鼠滑過ED2
-    var asd = document.getElementById('asd');
-    var asdf = document.getElementById('asdf');
-    asd.onmouseover = function () {
-      asdf.style.cssFloat="right"
-      asdf.style.display = "block";
-    }
-    asd.onmouseout = function () {
-      asdf.style.display = "none";
-    }
-
+  <footer class="text-center">
+    <p>Copyright &copy;Eddie All rights reserved.</p>
+  </footer>
+  <script>
+    $('.counter-value').each(function () {
+      $(this).prop('Counter', 0).animate({
+        Counter: $(this).text()
+      }, {
+          duration: 3500,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          }
+        });
+    });           
   </script>
+  <script type="text/javascript" src="js/clock.js"></script>
 </body>
 
 </html>

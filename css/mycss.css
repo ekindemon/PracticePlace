@@ -2,13 +2,36 @@
     margin: 0;
     padding: 0;
 }
+/* 通用 */
+.bg-dark{
+    background:black;
+}
 
+.color-white{
+    color: white;
+}
+.pd-40{
+    padding: 40px ;
+}
   /*body{
     background-color:#f3cd05;
   }*/
+
+  /* 查詢元素是否溢出 * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+}
+ */
+
+html{
+    overflow: auto; 
+    overflow-x:hidden
+}
+
 .head {
     /*background-color: rgb(253, 220, 148);*/
-
+font-family: 'Sedgwick Ave Display', cursive;
 
 }
 
@@ -96,7 +119,81 @@ p,li {
 li {
     margin-bottom:10px;
 }
-/*計時器動畫*/
+.resume {
+    background-image: url(../img/123.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    padding:100px;
+    margin: 30px 0;
+    color:white;
+}
+footer{
+    background-color: thistle;
+    background-image: url(../img/book-coffee.jpg);
+    background-size: cover;
+    color: black;
+    
+}
+footer p{
+    padding:100px;
+}
+.skill{
+    background-image: url(../img/knowledge.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+/* 字型 */
+h1{font-family: 'Sedgwick Ave Display', cursive;}
+
+/* 進度條 */
+
+.progress {
+    height: 30px;
+    background: #fff;
+    border-top: 5px solid #1c2647;
+    border-bottom: 5px solid #1c2647;
+    border-radius: 0;
+    margin-bottom: 25px;
+    overflow: visible;
+    position: relative;
+}
+
+.progress-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 10px;
+}
+
+.progress:before,
+.progress:after {
+    content: "";
+    width: 5px;
+    background: #1c2647;
+    position: absolute;
+    top: 0;
+    left: -5px;
+    bottom: 0;
+}
+
+.progress:after {
+    left: auto;
+    right: -5px;
+}
+
+.progress .progress-bar {
+    border: none;
+    box-shadow: none;
+    -webkit-animation: 2s linear 0s normal none infinite running progress-bar-stripes, animate-positive 1s;
+    animation: 2s linear 0s normal none infinite running progress-bar-stripes, animate-positive 1s;
+}
+
+
+
+
+/*計時器面板*/
 .counter{
     background: #7a7fb6;
     text-align: center;
@@ -106,6 +203,8 @@ li {
     padding: 30px 20px 50px;
     color: #fff;
     position: relative;
+    height:250px;
+
 }
 .counter:before,
 .counter:after,
@@ -153,4 +252,85 @@ li {
 }
 @media only screen and (max-width: 990px){
     .counter{ margin-bottom: 20px; }
-}                  
+}       
+ /*clock */
+
+.main{
+    margin-top: 5%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 70%;
+    text-align: center;
+}
+.control{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.break{
+    display: inline;
+    padding: 0 30px; 
+}
+.length{
+    display: inline;
+    padding: 0 30px;
+}
+span{
+    font-size: 2em;
+    color: #fff;
+    font-family: 'Bitter', serif;
+}
+.far{
+    font-size: 1.4em;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.control p{
+    color: #b5caa0;
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border:4px solid #a8d8b9;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    cursor: pointer;
+    z-index: 20;
+    overflow: hidden;
+}
+.clock:before{
+    content: '';
+    position: absolute;
+    border:4px solid #cb4042;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.clock h2{
+    font-family: 'Bitter', serif;
+    font-size: 2.5em;
+    margin-top: 80px;
+    color: #fff;
+}
+#per{
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-color: #b5caa0; 
+    /* background-color: #3f2b36; */
+    z-index: -1;
+}
