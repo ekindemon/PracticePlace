@@ -13,6 +13,12 @@
 .pd-40{
     padding: 40px ;
 }
+.indent{
+    text-indent: 2em;
+}
+.display-inline{
+    display: inline;
+}
   /*body{
     background-color:#f3cd05;
   }*/
@@ -283,7 +289,7 @@ span{
     color: #fff;
     font-family: 'Bitter', serif;
 }
-.far{
+.icon-size{
     font-size: 1.4em;
     color: #fff;
     cursor: pointer;
