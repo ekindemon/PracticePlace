@@ -289,8 +289,7 @@ span{
     color: #fff;
     font-family: 'Bitter', serif;
 }
-.icon-size{
-    font-size: 1.4em;
+.icon-cursor{
     color: #fff;
     cursor: pointer;
     margin: 0 10px;
