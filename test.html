@@ -1,119 +1,28 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-  <head>
-    <title>Zebra Stripes!</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
-    <script type="text/javascript">
-      $(function() {
-        $("table tr:nth-child(even)").addClass("striped");
-      });
-    </script>
-    <style>
-      body,td {
-        font-size: 10pt;
-      }
-      table {
-        background-color: black;
-        border: 1px black solid;
-        border-collapse: collapse;
-      }
-      th {
-        border: 1px outset silver;
-        background-color: maroon;
-        color: white;
-      }
-      tr {
-        background-color: white;
-        margin: 1px;
-      }
-      tr.striped {
-        background-color: coral;
-      }
-      td {
-        padding: 1px 8px;
-      }
-    </style>
-  </head>
 
-  <body>
-    <table>
-      <tr>
-        <th>Year</th>
-        <th>Make</th>
-        <th>Model</th>
-      </tr>
-      <tr>
-        <td>1965</td>
-        <td>Ford</td>
-        <td>Mustang</td>
-      </tr>
-      <tr>
-        <td>1970</td>
-        <td>Toyota</td>
-        <td>Corolla</td>
-      </tr>
-      <tr>
-        <td>1979</td>
-        <td>AMC</td>
-        <td>Jeep CJ-5</td>
-      </tr>
-      <tr>
-        <td>1983</td>
-        <td>Ford</td>
-        <td>EXP</td>
-      </tr>
-      <tr>
-        <td>1985</td>
-        <td>Dodge</td>
-        <td>Daytona</td>
-      </tr>
-      <tr>
-        <td>1990</td>
-        <td>Chrysler</td>
-        <td>Jeep Wrangler Sahara</td>
-      </tr>
-      <tr>
-        <td>1995</td>
-        <td>Ford</td>
-        <td>Ranger</td>
-      </tr>
-      <tr>
-        <td>1997</td>
-        <td>Chrysler</td>
-        <td>Jeep Wrangler Sahara</td>
-      </tr>
-      <tr>
-        <td>2000</td>
-        <td>Chrysler</td>
-        <td>Jeep Wrangler Sahara</td>
-      </tr>
-      <tr>
-        <td>2005</td>
-        <td>Chrysler</td>
-        <td>Jeep Wrangler Unlimited</td>
-      </tr>
-      <tr>
-        <td>2007</td>
-        <td>Dodge</td>
-        <td>Caliber R/T</td>
-      </tr>
-    </table>
-    <a href="http://fdsfjsadklhfkjasdhf" id=qwe>測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試</a>
-    <img id="qwer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Eddie_Redmayne_by_Gage_Skidmore.jpg/330px-Eddie_Redmayne_by_Gage_Skidmore.jpg"alt="" width="220px" height="200px" style="display:none" >
-    <script>
-    var qwe=document.getElementById('qwe');
-    var qwer=document.getElementById('qwer');
-    qwe.onmouseover=function(){
-      qwe.style.color="red";
-      qwer.style.display='block';
-    }
-    qwe.onmouseout=function(){
-      qwer.style.color='black';
-      qwer.style.display='none';
-    }
+<head>
+  <title>Zebra Stripes!</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+  <style>
+  </style>
+</head>
+
+<body>
+  <h2>This is a heading</h2>
+
+  <p id="p1">This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+  
+  <button>Click me to hide paragraphs</button>
+  <script>
+$("#p1").mouseup(function(){
+  alert("Mouse up over p1");
+});
 
 
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
