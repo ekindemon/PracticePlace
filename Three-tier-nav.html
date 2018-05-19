@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+</head>
+<style>
+	* {
+		text-decoration: none;
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.one-nav li {
+		float: left;
+		height: 30px;
+		line-height: 30px;
+		width: 100px;
+		background-color: green;
+		text-align: center;
+		border-right: 1px solid white;
+		margin: 0px;
+		padding: 0px;
+		cursor: pointer;
+
+	}
+
+	.one-nav a {
+		color: white;
+	}
+
+	.one-nav li:hover {
+		background: blueviolet;
+	}
+
+	.one-nav li:hover .two-nav {
+		display: block;
+	}
+
+	.one-nav :nth-last-child(1) {
+		border: none;
+	}
+
+	.two-nav {
+		display: none;
+	}
+
+	.two-nav li:hover .three-nav {
+		display: block;
+		position: relative;
+	}
+
+	.three-nav {
+		display: none;
+		position: absolute;
+		left: 100%;
+		top: -100%
+	}
+</style>
+<script>
+	$(".two-nav").hover(function(){
+		$(this).show(1000);
+	});
+</script>
+<body>
+	<div>
+		<ul class="one-nav">
+			<li>
+				<a href="">一層1</a>
+				<ul class="two-nav">
+					<li>
+						<a href="">二層1</a>
+						<ul class="three-nav">
+							<li>
+								<a href="">三層1</a>
+							</li>
+							<li>
+								<a href="">三層2</a>
+							</li>
+							<li>
+								<a href="">三層3</a>
+							</li>
+							<li>
+								<a href="">三層4</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">二層2</a>
+						<ul class="three-nav">
+							<li>
+								<a href="">三層1</a>
+							</li>
+							<li>
+								<a href="">三層2</a>
+							</li>
+							<li>
+								<a href="">三層3</a>
+							</li>
+							<li>
+								<a href="">三層4</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">二層3</a>
+						<ul class="three-nav">
+							<li>
+								<a href="">三層1</a>
+							</li>
+							<li>
+								<a href="">三層2</a>
+							</li>
+							<li>
+								<a href="">三層3</a>
+							</li>
+							<li>
+								<a href="">三層4</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">二層4</a>
+						<ul class="three-nav">
+							<li>
+								<a href="">三層1</a>
+							</li>
+							<li>
+								<a href="">三層2</a>
+							</li>
+							<li>
+								<a href="">三層3</a>
+							</li>
+							<li>
+								<a href="">三層4</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="">一層2</a>
+				<ul class="two-nav">
+					<li>
+						<a href="">二層1</a>
+						<ul class="three-nav">
+							<li>
+								<a href="">三層1</a>
+							</li>
+							<li>
+								<a href="">三層2</a>
+							</li>
+							<li>
+								<a href="">三層3</a>
+							</li>
+							<li>
+								<a href="">三層4</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">二層2</a>
+						<ul class="three-nav">
+							<li>
+								<a href="">三層1</a>
+							</li>
+							<li>
+								<a href="">三層2</a>
+							</li>
+							<li>
+								<a href="">三層3</a>
+							</li>
+							<li>
+								<a href="">三層4</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">二層3</a>
+						<ul class="three-nav">
+							<li>
+								<a href="">三層1</a>
+							</li>
+							<li>
+								<a href="">三層2</a>
+							</li>
+							<li>
+								<a href="">三層3</a>
+							</li>
+							<li>
+								<a href="">三層4</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">二層4</a>
+						<ul class="three-nav">
+							<li>
+								<a href="">三層1</a>
+							</li>
+							<li>
+								<a href="">三層2</a>
+							</li>
+							<li>
+								<a href="">三層3</a>
+							</li>
+							<li>
+								<a href="">三層4</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="">一層3</a>
+				<ul class="two-nav">
+					<li>
+						<a href="">二層1</a>
+					</li>
+					<li>
+						<a href="">二層2</a>
+					</li>
+					<li>
+						<a href="">二層3</a>
+					</li>
+					<li>
+						<a href="">二層4</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="">一層4</a>
+				<ul class="two-nav">
+					<li>
+						<a href="">二層1</a>
+					</li>
+					<li>
+						<a href="">二層2</a>
+					</li>
+					<li>
+						<a href="">二層3</a>
+					</li>
+					<li>
+						<a href="">二層4</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+
+</html>
