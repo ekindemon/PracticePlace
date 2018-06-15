@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: #fff18e;
+        }
+
+        #button_container {
+            text-align: center;
+            margin: 100px auto;
+        }
+
+        #button {
+
+            text-align: center;
+            margin: 100px auto;
+            background: #bc1939;
+            color: white;
+            text-decoration: none;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 32px;
+            border-top: 1px solid #c94660;
+            border-left: 1px solid #c94660;
+            padding: 15px 30px;
+            text-shadow: 1px 2px 0 #831127;
+            box-shadow: 1px 0 0 #831127, 0 1px 0 #831127, 2px 1px 0 #831127, 1px 2px 0 #831127, 3px 2px 0 #831127, 2px 3px 0 #831127, 4px 3px 0 #831127, 3px 4px 0 #831127, 4px 4px 2px #000;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body id="random_background">
+    <div id="button_container">
+        <a id="button" href="javascript:void(0);">Click me!</a>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+
+            function randomColor() {
+                return '#' + Math.random().toString(16).slice(2, 8);
+            };
+
+            $("#button").on("click", function () {
+                $('body').css('background', randomColor());
+            });
+        });
+    </script>
+</body>
+
+</html>
