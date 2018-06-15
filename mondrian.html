@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #color_palette{float: left;}
+        .color{
+            width: 50px;height:50px;border:1px solid black;margin:10px; cursor: pointer;
+        }
+        #red{background-color:red;}
+        #yellow{background-color: yellow;}
+        #blue{background-color:blue;}
+        #green{background-color:green;}
+        #white{background-color:white;}
+
+        #painting{width: 440px;height: 440px; border-left: 10px solid black;border-top: 10px solid black;margin:50px auto;}
+        .row{width: 100px;height: 100px; border-right:10px solid black;border-bottom:10px solid black;float: left;cursor: pointer;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        var paint="white"
+        $('.color').on("click",function(){
+            paint=$(this).css('background-color');
+            console.log(paint);
+        });
+
+        $('.row').on("click",function(){
+            $(this).css('background-color',paint);
+        });
+    });
+    </script>
+</head>
+
+<body id="mondrian" cz-shortcut-listen="true">
+
+    <div id="container">
+
+        <div id="title">Pick a color and paint the canvas</div>
+
+        <div id="spacer_container">
+            <!-- This keeps the footer from overlapping the workspace. -->
+            <div id="workspace">
+                <div id="color_palette">
+
+                    <div class="color" id="red"></div>
+                    <div class="color" id="yellow"></div>
+                    <div class="color" id="blue"></div>
+                    <div class="color" id="green"></div>
+                    <div class="color" id="white"></div>
+
+                </div>
+
+                <div id="painting">
+
+                    <div id="row_1">
+                        <div class="row" id="row_1_box_1"></div>
+                        <div class="row" id="row_1_box_2"></div>
+                        <div class="row" id="row_1_box_3"></div>
+                        <div class="row" id="row_1_box_4"></div>
+                    </div>
+
+                    <div id="row_2">
+                        <div class="row" id="row_2_box_1"></div>
+                        <div class="row" id="row_2_box_2"></div>
+                        <div class="row" id="row_2_box_3"></div>
+                        <div class="row" id="row_2_box_4"></div>
+                    </div>
+
+                    <div id="row_3">
+                        <div class="row" id="row_3_box_1"></div>
+                        <div class="row" id="row_3_box_2"></div>
+                        <div class="row" id="row_3_box_3"></div>
+                        <div class="row" id="row_3_box_4"></div>
+                    </div>
+
+                    <div id="row_4">
+                        <div class="row" id="row_4_box_1"></div>
+                        <div class="row" id="row_4_box_2"></div>
+                        <div class="row" id="row_4_box_3"></div>
+                        <div class="row" id="row_4_box_4"></div>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
