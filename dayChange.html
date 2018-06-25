@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{width:100%;}
+        ul li{list-style-type: none;}
+        .prototype{width: 700px; margin: 0 auto;position: relative;}
+        .prototype li{height: 100px;width: 100px; float: left;background-color: #F1C40F;position: relative;}
+        .prototype span{color: #f39c12; position: absolute;bottom: 10px; left: 10px;font-size: 22px;}
+
+
+        .change{width: 700px; margin: 0 auto;position: relative;top :-100px;}
+        .change li{height: 300px;width: 100px; float: left;background-color: #16A085;visibility:hidden;position: relative;}
+        .change h2{color:white;text-align: center;line-height:500px;}
+        h1{clear: both;text-align: center;width: 100%;height: 100px;background-color: #16A085;position: relative;top:-100px;color:white; line-height: 100px;text-shadow: -3px 3px 0 rgb(41, 39, 39);}
+    </style>
+
+</head>
+<body>
+    <div>
+    <ul class="prototype">
+        <li>
+            <span>Sun</span>
+        </li>
+        <li>
+            <span>Mon</span>
+        </li>
+        <li>
+            <span>Tue</span>
+        </li>
+        <li>
+            <span>Wed</span>
+        </li>
+        <li>
+            <span>Thu</span>
+        </li>
+        <li>
+            <span>Fri</span>
+        </li>
+        <li>
+            <span>Sat</span>
+        </li>
+    </ul>
+    <!-- 隱蔽 -->
+    <ul class="change">
+        <li id="a0">
+            <h2>Sun</h2>
+        </li>
+        <li id="a1">
+            <h2>Mon</h2>
+        </li>
+        <li id="a2">
+            <h2>Tue</h2>
+        </li>
+        <li id="a3">
+            <h2>Wed</h2>
+        </li>
+        <li id="a4">
+            <h2>Thu</h2>
+        </li>
+        <li id="a5">
+            <h2>Fri</h2>
+        </li>
+        <li id="a6">
+            <h2>Sat</h2>
+        </li>
+    </ul>
+    <h1 id="close">Click &amp; Close It!</h1>
+
+<script>
+        var day = new Date().getDay();
+        console.log(day);
+        var ac = document.getElementById("a"+ day).style.visibility="visible";
+        console.log(ac);
+        
+        
+        
+    </script>
+    <script>
+            document.getElementById("close").onclick = function(){
+                if(confirm("Close Window?")){
+                    close();
+                };
+            };
+                
+                
+                
+        
+        
+    </script>
+</div>
+</body>
+</html>
+</html>
