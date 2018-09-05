@@ -1,30 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <button type="button" onclick="loadDoc()">click</button>
+    <button type="button" >click</button>
 
-    <p id="demo"></p>
+    <div id="demo"></div>
     <script>
-        function loadDoc(){
-            var xhttp = new XMLHttpRequest();
-            var obj = 
-            xhttp.onreadystatechange=function(){
-                if(this.readyState == 4 && this.status ==200){
-                    document.getElementById("demo").innerHTML = this.responseText;
-                    console.log(xhttp.responseText)
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.ajax({
+                url:"http://localhost:53314/api/product",
+                type : "GET",
+                data:"id=" + id +"&name" + name,
+                // data:{
+                //     "id":id,
+                //     "name": name,
+                // },
+                dataType:'json',
+                error:function() {
+                    alert("失敗");
+                },
+                
+                success:function(result){
+                    console.log(typeof(result));
+                    console.log(result);
+                    var htmlString = "";
+                    for(i=0;i<result.length;i++){
+                        var name =  result[i].Name;
+                        var category = result[i].Category;
+                        var price = result[i].Price
+                        htmlString +="<p>Name = "+ name +", 種類 = "+ category + ", 價錢 = "+ price + "</p>"
+                    }
+                    $("#demo").html(htmlString);
+                
                 }
-            };
-            xhttp.open("GET","http://data.taipei/opendata/datalist/datasetMeta/download?id=95f1bf85-d6a1-4e9e-9de1-2608df51aec1&rid=c4c1240a-273c-4872-abe4-84fd8b5300d8",true);
-            xhttp.send();
-        }
-
-
+            });
+            })
+        })
+        
     </script>
 </body>
+
 </html>
