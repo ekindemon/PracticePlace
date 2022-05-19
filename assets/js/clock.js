@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var session = 25;      
+    var session = 15;      
     var breaklength = 5;            
     var flag = 1;          
     var sec = session*60;   
@@ -158,8 +158,5 @@ $(document).ready(function(){
         //console.log(sec);
         timeChange();
     });
-
-
-
 
 });

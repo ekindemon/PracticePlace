@@ -1,0 +1,47 @@
+
+<!-- 字型 -->
+<link href="https://fonts.googleapis.com/css?family=Bitter|Sedgwick+Ave+Display" rel="stylesheet">
+<!-- font awesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+  crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="assets/css/mycss.css">
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- 番茄鐘 -->
+
+<div class="col-md-6 wow rotateInDownRight" style="background-color:#cb4042 ;">
+  <div class="main">
+    <h1 class="color-white">Pomodoro Clock</h1>
+    <div class="control">
+      <div class="break ">
+        <p>BREAK LENGTH</p>
+        <div id="break-minus" class="display-inline ">
+          <i class="fa-inverse far fa-minus-square fa-2x icon-cursor" aria-hidden="true"></i>
+        </div>
+        <span id="break-length"class="">5</span>
+        <div id="break-plus" class="display-inline">
+          <i class="fa-inverse far fa-plus-square fa-2x icon-cursor" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="length">
+        <p>SESSION LENGTH</p>
+        <div id="session-minus"class="display-inline">
+        <i class=" far fa-minus-square fa-2x fa-inverse icon-cursor" aria-hidden="true" ></i>
+      </div>
+        <span id="session-length">15</span>
+        <div id="session-plus"class="display-inline">
+        <i class="fa-inverse far far fa-plus-square fa-2x icon-cursor" aria-hidden="true" ></i>
+      </div>
+      </div>
+    </div>
+    <div class="clock">
+      <h2 id="show-title">Session</h2>
+      <h2 id="show-time">15:00</h2>
+      <span id="per"></span>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/clock.js"></script>
